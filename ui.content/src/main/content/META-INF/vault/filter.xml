@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/conf/microsoft" mode="merge"/>
+    <filter root="/content/microsoft" mode="merge"/>
+    <filter root="/content/dam/microsoft" mode="merge">
+        <exclude pattern="/content/dam/microsoft(/.*)?"/>
+        <include pattern="/content/dam/microsoft/jcr:content(/.*)?"/>
+    </filter>
+    <filter root="/content/dam/microsoft/asset.jpg" mode="merge"/>
+    <filter root="/content/experience-fragments/microsoft" mode="merge"/>
+</workspaceFilter>

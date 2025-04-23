@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/apps/microsoft/clientlibs"/>
+    <filter root="/apps/microsoft/components"/>
+    <filter root="/apps/microsoft/i18n"/>
+    <filter root="/apps/msm/microsoft_blueprint" mode="merge"/>
+</workspaceFilter>

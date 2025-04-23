@@ -1,0 +1,7 @@
+{
+    "scripts": [
+        "create path (sling:OrderedFolder) /content/dam/microsoft",
+        "create path (nt:unstructured) /content/dam/microsoft/jcr:content",
+        "set properties on /content/dam/microsoft/jcr:content\n  set cq:conf{String} to /conf/microsoft\n  set jcr:title{String} to \"Microsoft\"\nend"
+    ]
+}

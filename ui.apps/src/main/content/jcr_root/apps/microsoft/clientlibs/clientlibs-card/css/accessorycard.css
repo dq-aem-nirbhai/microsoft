@@ -1,0 +1,19 @@
+.ocpLegacyBold1{
+ color:black;
+ }
+
+.ocpLegacyBold{
+font-size:1.0em;
+font-weight:600;
+ color:black;
+}
+.link-uppercase {
+color:blue;
+ext-transform: uppercase;
+text-decoration: none;
+font-weight: 600;
+}
+.container{
+padding:10px 5px 20px 10px;
+background-color: rgb(211,211,211);
+}

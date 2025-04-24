@@ -1,0 +1,20 @@
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+     data-sly-call="${clientlib.css @ categories='microsoft.accessorycard'}"/>
+
+<sly data-sly-use.model="com.aem.trg.microsoft.core.models.AccessoryCard"/>
+
+<div class="container">
+
+    <!-- Image -->
+    <img class="img" src="${model.fileReference}"/>
+
+    <!-- Title / Description -->
+    <p class="ocpLegacyBold">${model.text1}</p>
+    <p class="ocpLegacyBold1">${model.text2}</p>
+
+    <!-- Link Button -->
+    <a href="${model.link}" class="link-uppercase" data-sly-test="${model.link}">
+        ${model.linkTitle}
+    </a>
+
+</div>

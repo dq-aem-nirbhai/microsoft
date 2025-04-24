@@ -1,0 +1,25 @@
+<sly data-sly-use.model="com.aem.trg.microsoft.core.models.CustomImageComponent" />
+<sly data-sly-use.clientlib="core/wcm/components/commons/v1/templates/clientlib.html">
+    <sly data-sly-call="${clientlib.css @ categories='microsoft.textlinkwithbutton'}" />
+</sly>
+
+<div class="custom-image-component">
+
+    <!-- Inner container -->
+    <div class="custom-image-inner">
+
+        <!-- Image -->
+        <img src="${model.fileReference}" id="img1" width="600px"/>
+
+        <!-- Text block -->
+        <div class="custom-text-block">
+
+            <p>${model.text @ context='html'}</p>
+            <a href="${model.buttonLink}" class="custom-button">
+                ${model.buttonText}
+            </a>
+
+            <p class="custom-description">${model.description2 @ context='html'}</p>
+        </div>
+    </div>
+</div>

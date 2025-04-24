@@ -1,0 +1,17 @@
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+     data-sly-call="${clientlib.css @ categories='microsoft.footer'}"/>
+
+<div class="footer-container">
+    <div class="footer-fragment">
+        <sly data-sly-use.model="com.aem.trg.microsoft.core.models.FooterLinksComponentModel"/>
+
+        <p class="footer-title">${model.title}</p>
+        <ul class="footer-link-list">
+            <sly data-sly-list.link="${model.links}">
+                <li class="footer-link-item">
+                    <a href="${link.link}" class="footer-link-text">${link.text}</a>
+                </li>
+            </sly>
+        </ul>
+    </div>
+</div>

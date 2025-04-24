@@ -1,0 +1,30 @@
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+     data-sly-call="${clientlib.css @ categories='microsoft.footerbar'}"/>
+
+<sly data-sly-use.barmodel="com.aem.trg.microsoft.core.models.FooterBarModel"/>
+
+<div class="footer-bar">
+
+
+    <div class="footer-left">
+        <a href="${barmodel.link1}">🌐 ${barmodel.language}</a>
+        <a href="${barmodel.link2}">
+            <img src="${barmodel.fileReference}" id="img1" class="custom-image" />
+            ${barmodel.privacyChoices}
+        </a>
+        <a href="${barmodel.link3}">${barmodel.consumerHealth}</a>
+    </div>
+
+
+    <div class="footer-right">
+        <ul class="footer-links">
+            <sly data-sly-list.link="${barmodel.links}">
+                <li class="footer-link-item">
+                    <a href="${link.link}" class="footer-link-text">${link.text}</a>
+                </li>
+            </sly>
+        </ul>
+        <p>© Microsoft 2025</p>
+    </div>
+
+</div>

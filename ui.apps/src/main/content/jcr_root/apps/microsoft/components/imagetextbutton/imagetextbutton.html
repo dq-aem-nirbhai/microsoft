@@ -1,0 +1,26 @@
+<sly data-sly-use.model="com.aem.trg.microsoft.core.models.ImageTextButton" />
+<sly data-sly-use.clientlib="core/wcm/components/commons/v1/templates/clientlib.html">
+    <sly data-sly-call="${clientlib.all @ categories='microsoft.imagetextbutton'}" />
+</sly>
+
+<div class="image-component">
+
+    <!-- Inner container -->
+    <div class="image-inner">
+
+        <!-- Image -->
+        <img src="${model.fileReference}" id="img1" class="customimage" width="600px"/>
+
+        <!-- Text block -->
+        <div class="custom-text-block">
+            <h1>${model.text @ context='html'}</h1>
+
+            <a href="${model.buttonLink}" class="custom-button">
+                ${model.buttonText}
+            </a>
+
+            <p class="custom-description">${model.description2 @ context='html'}</p>
+        </div>
+    </div>
+</div>
+

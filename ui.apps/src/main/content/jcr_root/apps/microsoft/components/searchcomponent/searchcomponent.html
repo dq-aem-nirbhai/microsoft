@@ -1,0 +1,35 @@
+<sly data-sly-use.model="com.aem.trg.microsoft.core.models.SearchComponentModel">
+    <div style="background-color: #a9a9a9; text-align: center; padding: 60px 20px;">
+        <h1 style="
+            color: #1e1e1e;
+            font-size: 3em;
+            line-height: 1.133333;
+            font-family: 'Segoe UI Semibold', 'wf_segoe-ui_semibold', 'wf_segoe-ui_normal', 'Segoe UI', 'Segoe WP', Tahoma, Arial, sans-serif;
+            font-weight: 400;
+            margin: 0;
+            text-align: center;
+            margin-bottom: 20px;">
+            ${model.heading}
+        </h1>
+
+        <div style="position: relative; display: inline-block;">
+            <input
+                    type="text"
+                    placeholder="${model.placeholderText}"
+                    style="padding: 10px 40px 10px 10px; width: 500px; border-radius: 5px; border: 1px solid #ccc; font-size: 16px;"
+            />
+            <span style="
+                position: absolute;
+                right: 10px;
+                top: 50%;
+                transform: translateY(-50%);
+                color: #0078D7;
+                font-size: 22px;
+                font-weight: bold;
+                cursor: pointer;
+            ">
+                →
+</span>
+        </div>
+    </div>
+</sly>

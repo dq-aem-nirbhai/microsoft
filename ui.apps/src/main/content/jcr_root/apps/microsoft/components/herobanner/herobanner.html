@@ -1,0 +1,21 @@
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+     data-sly-call="${clientlib.css @ categories='microsoft.herobanner'}"/>
+<sly data-sly-use.model="com.aem.trg.microsoft.core.models.HeroBanner"/>
+
+<div class="image-component">
+    <div class="image-container">
+        <!-- Render Image -->
+        <img src="${properties.fileReference}" alt="${properties.title}" class="image" />
+
+        <!-- Overlay content aligned left -->
+        <div class="overlay">
+            <div class="overlay-content">
+                <h2 class="title">${properties.title}</h2>
+                <p class="text">${properties.text @ context='html'}</p>
+                <a href="${properties.linkUrl}" class="link" >
+                    <button class="button">${properties.buttonText}</button>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

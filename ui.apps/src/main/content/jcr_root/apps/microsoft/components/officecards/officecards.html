@@ -1,0 +1,23 @@
+<sly data-sly-use.clientlib="core/wcm/components/commons/v1/templates/clientlib.html">
+    <sly data-sly-call="${clientlib.css @ categories='microsoft.officecards'}"/>
+</sly>
+<sly data-sly-use.officecards="com.aem.trg.microsoft.core.models.OfficeCards" />
+
+<div class="officecards-component">
+
+    <div class="officecards-container">
+        <sly data-sly-list.item="${officecards.links}">
+            <div class="officecards">
+                <img src="${item.fileReference}" alt="${item.title @context='html'}"/>
+                <div class="officecards-content">
+                    <h3>${item.title @context='html'}</h3>
+                    <p>${item.description @context='html'}</p>
+                    <div class="button-container"> <!-- wrap buttons inside -->
+                        <a href="${item.buttonlink}">${item.buttontext @context='html'}</a>
+                        <a href="${item.buttonlink1}">${item.buttontext1 @context='html'}</a>
+                    </div>
+                </div>
+            </div>
+        </sly>
+    </div>
+</div>

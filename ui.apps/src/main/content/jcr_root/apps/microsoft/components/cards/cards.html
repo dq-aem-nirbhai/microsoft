@@ -1,0 +1,37 @@
+<sly data-sly-use.clientlib="core/wcm/components/commons/v1/templates/clientlib.html">
+    <sly data-sly-call="${clientlib.css @ categories='microsoft.cards'}"/>
+</sly>
+<sly data-sly-use.cards="com.aem.trg.microsoft.core.models.Cards" />
+
+<div class="cards-container">
+    <sly data-sly-list.item="${cards.links}">
+        <div class="cards">
+            <img
+                    src="${item.fileReference}"
+                    alt="${item.title @context='html'}"
+                    class="cards-clickable"
+                    onclick="window.location.href='${item.buttonlink @context='uri'}';"
+            />
+            <div class="cards-content">
+                <h3
+                        class="cards-clickable"
+                        onclick="window.location.href='${item.buttonlink @context='uri'}';"
+                >
+                    ${item.title @context='html'}
+                </h3>
+
+                <p
+                        class="cards-clickable"
+                        onclick="window.location.href='${item.buttonlink @context='uri'}';"
+                >
+                    ${item.description @context='html'}
+                </p>
+
+                <div class="cards-buttons">
+                    <a href="${item.buttonlink}" class="card-button">${item.buttontext @context='html'}</a>
+                    <!-- Add more buttons if necessary -->
+                </div>
+            </div>
+        </div>
+    </sly>
+</div>

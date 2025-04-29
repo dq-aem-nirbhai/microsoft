@@ -1,21 +1,21 @@
 package com.aem.trg.microsoft.core.models;
 
-
-
 import com.adobe.cq.export.json.ComponentExporter;
 import com.adobe.cq.export.json.ExporterConstants;
 import org.apache.sling.api.resource.Resource;
-import org.apache.sling.models.annotations.*;
+import org.apache.sling.models.annotations.DefaultInjectionStrategy;
+import org.apache.sling.models.annotations.Model;
 import org.apache.sling.models.annotations.injectorspecific.ValueMapValue;
 
-import javax.annotation.PostConstruct;
-
-@Model(adaptables = Resource.class,
-        defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL,
-        resourceType = "microsoft/components/herobanner",  // Change this to your component's resourceType
-        adapters = { HeroBanner.class, ComponentExporter.class })
-@Exporter(name = ExporterConstants.SLING_MODEL_EXPORTER_NAME, extensions = ExporterConstants.SLING_MODEL_EXTENSION)
+@Model(
+        adaptables = Resource.class,
+        adapters = { HeroBanner.class, ComponentExporter.class },
+        resourceType = HeroBanner.RESOURCE_TYPE,
+        defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL
+)
 public class HeroBanner implements ComponentExporter {
+
+    public static final String RESOURCE_TYPE = "your-project/components/herobanner"; // Replace with your actual component path
 
     @ValueMapValue
     private String fileReference;
@@ -31,15 +31,6 @@ public class HeroBanner implements ComponentExporter {
 
     @ValueMapValue
     private String buttonText;
-
-    private String imagePath;
-
-    @PostConstruct
-    protected void init() {
-        if (fileReference != null) {
-            imagePath = "/content/dam" + fileReference;  // Assuming the file is stored in DAM (Digital Asset Management)
-        }
-    }
 
     public String getFileReference() {
         return fileReference;
@@ -61,12 +52,8 @@ public class HeroBanner implements ComponentExporter {
         return buttonText;
     }
 
-    public String getImagePath() {
-        return imagePath;
-    }
-
     @Override
     public String getExportedType() {
-        return "microsoft/components/herobanner";  // Ensure this matches the resourceType of the dialog
+        return RESOURCE_TYPE;
     }
 }

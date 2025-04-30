@@ -1,7 +1,7 @@
 <div class="icons" data-sly-use.model="com.aem.trg.microsoft.core.models.IconModel">
     <div class="card-list" data-sly-list.card="${model.cards}">
         <div class="card-item">
-            <img src="${card.fileReference @ context='uri'}" alt="${card.title}" />
+            <img src="${card.fileReference}"/>
             <a href="${card.link @ context='uri'}" class="card-link">${card.title}</a>
         </div>
     </div>

@@ -1,19 +1,21 @@
 package com.aem.trg.microsoft.core.models;
 
 import com.adobe.cq.export.json.ComponentExporter;
-import com.adobe.cq.wcm.core.components.models.Image;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.models.annotations.DefaultInjectionStrategy;
 import org.apache.sling.models.annotations.Model;
-import org.apache.sling.models.annotations.injectorspecific.ValueMapValue;
 import org.apache.sling.models.annotations.injectorspecific.ChildResource;
+import org.apache.sling.models.annotations.injectorspecific.ValueMapValue;
 
 import javax.annotation.PostConstruct;
 import javax.inject.Inject;
 
+
+
+
 @Model(adaptables = Resource.class,
         defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL)
-public class ImageTextButton implements ComponentExporter {
+public class ReusableComponent implements ComponentExporter {
     protected static final String RESOURCE_TYPE = "myFirstAemProject/components/textwithimage";
 
     @ValueMapValue
@@ -39,6 +41,12 @@ public class ImageTextButton implements ComponentExporter {
 
     @ValueMapValue
     private boolean showButton;
+    @ValueMapValue
+    private String layoutChoice;
+
+    public String getLayoutChoice() {
+        return layoutChoice;
+    }
 
     public boolean isShowButton() {
         return showButton;

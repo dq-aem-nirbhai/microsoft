@@ -1,0 +1,50 @@
+<sly data-sly-use.clientlib="core/wcm/components/commons/v1/templates/clientlib.html">
+    <sly data-sly-call="${clientlib.css @ categories='microsoft.card1'}"/>
+</sly>
+<sly data-sly-use.card1="com.aem.trg.microsoft.core.models.Card1" />
+
+<div class="card1-component">
+    <h2>${card1.mainLabel @context='html'}</h2>
+
+    <div class="card1-container">
+        <sly data-sly-list.item="${card1.links}">
+            <div class="card1">
+
+                <img
+                        src="${item.fileReference}"
+                        alt="${item.title @context='html'}"
+                        class="card1-clickable"
+                        onclick="window.location.href='${item.buttonlink @context='uri'}';"
+                />
+
+                <div class="card1-content">
+
+                    <div class="card1-container">
+                        <sly data-sly-test="${itemList.index == 0}">
+                            <div class="card1-badge">New</div>
+                        </sly>
+                    </div>
+
+                    <h3
+                            class="card1-clickable"
+                            onclick="window.location.href='${item.buttonlink @context='uri'}';"
+                    >
+                        ${item.title @context='html'}
+                    </h3>
+
+                    <p
+                            class="card1-clickable"
+                            onclick="window.location.href='${item.buttonlink @context='uri'}';"
+                    >
+                        ${item.description @context='html'}
+                    </p>
+
+                    <div class="card1-buttons">
+                        <a href="${item.buttonlink}" class="card1-button">${item.buttontext @context='html'}</a>
+                        <!-- Add more buttons if needed -->
+                    </div>
+                </div>
+            </div>
+        </sly>
+    </div>
+</div>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root
+        xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+        xmlns:cq="http://www.day.com/jcr/cq/1.0"
+        xmlns:jcr="http://www.jcp.org/jcr/1.0"
+        jcr:primaryType="nt:unstructured"
+        jcr:title="Home page Header"
+        sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <main
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+
+                    <file
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                            class="cq-droptarget"
+                            fileNameParameter="./fileName"
+                            fileReferenceParameter="./fileReference"
+                            mimeTypes="[image/gif,image/jpeg,image/png,image/tiff,image/svg+xml]"
+                            name="./file"/>
+                    <link
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                            name="./link"
+                            fieldLabel="link"
+                            rootPath="/content" />
+                    <!-- Navigation Items -->
+                    <navItems
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                            composite="{Boolean}true"
+                            fieldLabel="Navigation Items">
+                        <field
+                                jcr:primaryType="nt:unstructured"
+                                name="./navItems"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                            <items jcr:primaryType="nt:unstructured">
+                                <title
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        name="./title"
+                                        fieldLabel="Title" />
+                                <url
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                        name="./url"
+                                        fieldLabel="URL"
+                                        rootPath="/content" />
+                            </items>
+                        </field>
+                    </navItems>
+                    <allMicrosoftLinkText
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            name="./allMicrosoftLinkText"
+                            fieldLabel="All Microsoft Text" />
+
+                    <allMicrosoftLink
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                            name="./allMicrosoftLink"
+                            fieldLabel="link"
+                            rootPath="/content" />
+
+                                <searchtitle
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        name="./searchtitle"
+                                        fieldLabel="icon title" />
+
+                                <searchlink
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                        name="./searchlink"
+                                        fieldLabel="link"
+                                        rootPath="/content" />
+                                <searchicon
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                                        class="cq-droptarget"
+                                        fileNameParameter="./fileName"
+                                        fileReferenceParameter="./searchicon"
+                                        mimeTypes="[image/gif,image/jpeg,image/png,image/tiff,image/svg+xml]"
+                                        name="./file"/>
+
+                    <carttitle
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            name="./carttitle"
+                            fieldLabel="icon title" />
+
+                    <cartlink
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                            name="./cartlink"
+                            fieldLabel="link"
+                            rootPath="/content" />
+                    <carticon
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                            class="cq-droptarget"
+                            fileNameParameter="./fileName"
+                            fileReferenceParameter="./carticon"
+                            mimeTypes="[image/gif,image/jpeg,image/png,image/tiff,image/svg+xml]"
+                            name="./file"/>
+
+                    <signintitle
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            name="./signintitle"
+                            fieldLabel="icon title" />
+
+                    <signinlink
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                            name="./signinlink"
+                            fieldLabel="link"
+                            rootPath="/content" />
+                    <signinicon
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                            class="cq-droptarget"
+                            fileNameParameter="./fileName"
+                            fileReferenceParameter="./signinicon"
+                            mimeTypes="[image/gif,image/jpeg,image/png,image/tiff,image/svg+xml]"
+                            name="./file"/>
+
+                            </items>
+
+            </main>
+        </items>
+    </content>
+</jcr:root>

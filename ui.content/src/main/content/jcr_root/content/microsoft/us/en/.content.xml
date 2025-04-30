@@ -89,5 +89,6 @@
     </jcr:content>
     <homepage/>
     <first/>
+    <cards/> 
     <testcomponent/>
 </jcr:root>

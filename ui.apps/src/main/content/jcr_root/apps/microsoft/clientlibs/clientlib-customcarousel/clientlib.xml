@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<clientlibs>
+    <categories>
+        <category>microsoft.customcarousel</category>
+    </categories>
+    <js>
+        <js files="js/jquery.min.js"/>
+        <js files="js/slick.min.js"/>
+    </js>
+    <css>
+        <css files="css/slick.css"/>
+        <css files="css/slick-theme.css"/>
+        <css files="css/carouselcomponent.css"/>
+    </css>
+</clientlibs>

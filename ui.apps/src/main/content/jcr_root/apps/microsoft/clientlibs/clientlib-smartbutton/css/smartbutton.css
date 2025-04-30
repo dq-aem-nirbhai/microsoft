@@ -1,0 +1,45 @@
+/* Microsoft-style Back to Top Button */
+.back-to-top {
+position: fixed;
+bottom: 30px; /* Adjust the vertical position */
+right: 30px; /* Adjust the horizontal position */
+background-color: gray; /* Background color (Microsoft style gray) */
+color: black; /* Corrected 'balck' to 'black' */
+font-size: 15px; /* Font size */
+width: 150px; /* Button width */
+height: 50px; /* Button height */
+display: none; /* Initially hidden */
+align-items: center;
+justify-content: center;
+text-align: center;
+cursor: pointer;
+z-index: 9999;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for floating effect */
+transition: opacity 0.3s ease, transform 0.3s ease;
+border-radius: 5px; /* Rounded corners */
+font-weight: bold; /* Bold text */
+padding: 0 10px; /* Add some padding to make text not stick to edges */
+}
+
+/* When the button is visible */
+.back-to-top.show {
+display: flex;
+opacity: 1; /* Make button visible */
+}
+
+/* Button hover effect */
+.back-to-top:hover {
+background-color: white; /* Change background on hover */
+color: gray; /* Change text color on hover */
+}
+
+/* Button scrolling up behavior */
+.back-to-top.scroll-up {
+bottom: 80px; /* Move button higher when scrolling up */
+}
+
+/* Align text and icon within the button */
+.back-to-top b {
+display: inline-block;
+margin-left: 5px; /* Spacing between the icon and text */
+}

@@ -1,0 +1,25 @@
+<sly data-sly-use.model="com.aem.trg.microsoft.core.models.ReusableComponent" />
+<sly data-sly-use.clientlib="core/wcm/components/commons/v1/templates/clientlib.html">
+    <sly data-sly-call="${clientlib.all @ categories='microsoft.reusable'}" />
+</sly>
+
+<div class="image-text-button ${model.layoutChoice}"><!-- or right, based on a future model property -->
+
+    <!-- Image Section -->
+    <div class="image-container">
+        <img src="${model.fileReference}" alt="Image" width="600px"/>
+    </div>
+
+    <!-- Text Section -->
+    <div class="text-container">
+        <p>${model.text @ context='html'}</p>
+
+        <sly data-sly-test="${model.showButton}">
+            <a href="${model.buttonLink}" class="btn">
+                ${model.buttonText}
+            </a>
+        </sly>
+
+        <p class="custom-description">${model.description2 @ context='html'}</p>
+    </div>
+</div>

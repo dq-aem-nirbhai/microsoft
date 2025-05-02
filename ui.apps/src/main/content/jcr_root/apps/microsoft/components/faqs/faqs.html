@@ -1,0 +1,41 @@
+<sly data-sly-use.clientlib="core/wcm/components/commons/v1/templates/clientlib.html">
+    <sly data-sly-call="${clientlib.css @ categories='microsoft.accordion'}"/>
+    <sly data-sly-call="${clientlib.js @ categories='microsoft.accordion'}" />
+</sly>
+
+
+
+<sly data-sly-use.model="com.aem.trg.microsoft.core.models.Accordion">
+    <div class="main-container">
+        <h1 class="title">${model.title}</h1>
+
+        <div class="faq-buttons mb-3">
+            <button class="btn-link" onclick="expandAllAccordions()">Expand All&nbsp;&nbsp;|</button>
+            <button class="btn-link" onclick="collapseAllAccordions()">Collapse All</button>
+        </div>
+
+        <div class="accordion-container">
+            <ul class="accordion-list">
+                <sly data-sly-list.faq="${model.qs}">
+                    <li class="accordion-item">
+                        <button class="accordion-question">
+                            <span class="arrow">&gt;</span>
+                            <span class="question-text">${faq.question}</span>
+                        </button>
+                        <div class="accordion-answer hidden">
+                            ${faq.answer @ context='html'}
+                        </div>
+                    </li>
+                </sly>
+            </ul>
+        </div>
+    </div>
+</sly>
+
+<style>
+
+</style>
+
+<script>
+
+</script>

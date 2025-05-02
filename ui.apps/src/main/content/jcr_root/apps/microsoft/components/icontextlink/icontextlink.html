@@ -1,8 +1,8 @@
 <div class="icons" data-sly-use.model="com.aem.trg.microsoft.core.models.IconModel">
     <div class="card-list" data-sly-list.card="${model.cards}">
         <div class="card-item">
-            <img src="${card.fileReference}"/>
-            <a href="${card.link @ context='uri'}" class="card-link">${card.title}</a>
+            <a href="${card.link @ context='uri'}" class="card-link"><img src="${card.fileReference}"/>
+                <a href="${card.link @ context='uri'}" class="card-link">${card.title}</a>
         </div>
     </div>
 </div>
@@ -10,45 +10,47 @@
 <style>
 
     .icons {
-  padding: 40px 20px;
-  background-color: #ffffff;
-  text-align: center;
-}
+      padding: 40px 20px;
+      background-color: #ffffff;
+      text-align: center;
+    }
 
-.card-list {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 30px; /* reduced space between cards */
-}
+    .card-list {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1px; /* drastically reduced the gap between icons */
+    }
 
-.card-item {
-  width: 160px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
+    .card-item {
+      width: 120px; /* narrower card */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin: 0; /* remove any default spacing */
+      padding: 0;
+    }
 
-.card-item img {
-  width: 32px;
-  height: 32px;
-  margin-bottom: 6px; /* ↓ reduced gap between icon and text */
-  object-fit: contain;
-}
+    .card-item img {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 2px; /* minimal space between icon and text */
+      object-fit: contain;
+    }
 
-.card-link {
-  font-size: 14px;
-  color: #0067b8;
-  text-decoration: underline;
-  margin-top: 0;      /* remove unnecessary spacing */
-  font-weight: 500;
-}
+    .card-link {
+      font-size: 13px;
+      color: #0067b8;
+      text-decoration: underline;
+      margin: 0;
+      font-weight: 500;
+    }
 
-.card-link:hover {
-  text-decoration: none;
-  color: #005ba1;
-}
+    .card-link:hover {
+      text-decoration: none;
+      color: #005ba1;
+    }
 
 
 </style>

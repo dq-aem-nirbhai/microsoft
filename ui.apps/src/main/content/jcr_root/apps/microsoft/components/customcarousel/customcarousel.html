@@ -1,0 +1,163 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+
+<div data-sly-use.model="com.aem.trg.microsoft.core.models.CustomCarousel">
+    <div class="carousel-wrapper">
+        <!-- Slick Carousel Slides -->
+        <div class="carousel-container slick-carousel" data-sly-list.item="${model.slides}">
+            <div class="carousel-slide">
+                <img src="${item.fileReference}" alt="${item.title}" class="carousel-image"/>
+
+                <div class="carousel-content ${item.cardLayout ? 'card-style' : ''}">
+                    <h2 class="carousel-title">${item.title}</h2>
+                    <div class="carousel-text">${item.text @context='html'}</div>
+                    <a href="${item.buttonLink}" class="carousel-button">${item.buttonText}</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Custom Arrows and Pause/Play -->
+        <div class="carousel-controls">
+            <button class="carousel-prev" aria-label="Previous Slide">&#10094;</button>
+            <button class="carousel-pause" aria-label="Pause Carousel">&#10074;&#10074;</button>
+            <button class="carousel-next" aria-label="Next Slide">&#10095;</button>
+        </div>
+    </div>
+</div>
+
+
+<style>
+    .carousel-wrapper {
+        position: relative;
+        width: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+
+    .carousel-slide {
+        position: relative;
+    }
+
+    .carousel-image {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+
+    .carousel-content {
+        position: absolute;
+        top: 50%;
+        left: 10%;
+        white-space: normal;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        transform: translateY(-50%);
+        color: black;
+        max-width: 50%;
+        padding: 20px;
+        text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+    }
+
+
+    .card-style {
+        background-color: rgba(255, 255, 255, 0.9);
+        color: #000;
+        padding: 20px;
+        max-width: 430px;
+        border-radius: 12px;
+        text-shadow: none;
+    }
+
+    .carousel-title {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+        white-space: normal;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+
+    .carousel-text {
+        margin-bottom: 1rem;
+        white-space: normal;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+
+
+    .carousel-button {
+        background-color: #0067b8;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .carousel-button:hover {
+        background-color: #005a9e;
+    }
+
+    .carousel-controls {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+        gap: 15px;
+    }
+
+    .carousel-controls button {
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        color: #333;
+        transition: color 0.3s;
+    }
+
+    .carousel-controls button:hover {
+        color: #0067b8;
+    }
+</style>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+
+<script>
+    $(document).ready(function(){
+        var $carousel = $('.slick-carousel');
+
+        $carousel.slick({
+            dots: true,
+            arrows: false,
+            infinite: true,
+            speed: 500,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 4000,
+            adaptiveHeight: true
+        });
+
+        $('.carousel-prev').on('click', function(){
+            $carousel.slick('slickPrev');
+        });
+
+        $('.carousel-next').on('click', function(){
+            $carousel.slick('slickNext');
+        });
+
+        var isPaused = false;
+        $('.carousel-pause').on('click', function(){
+            if (isPaused) {
+                $carousel.slick('slickPlay');
+                $(this).html('&#10074;&#10074;');
+            } else {
+                $carousel.slick('slickPause');
+                $(this).html('&#9658;');
+            }
+            isPaused = !isPaused;
+        });
+    });
+</script>

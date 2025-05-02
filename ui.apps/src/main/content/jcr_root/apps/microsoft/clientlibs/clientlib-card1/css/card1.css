@@ -1,0 +1,104 @@
+.card1-component {
+    padding: 2rem;
+    background-color: #f9f9f9;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.card1-component h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    color: #1a1a1a;
+    padding-left: 70px;
+}
+
+.card1-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-right: 30px;
+}
+
+.card1 {
+    background-color: #ffffff;
+    border: 1px solid #e1e1e1;
+    border-radius: 0; /* sharp edges */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    overflow: hidden;
+    width: 300px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.card1:hover {
+    transform: translateY(-5px);
+}
+
+.card1 img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 0;
+    cursor: pointer;
+}
+
+.card1-badge {
+    margin: 10px 10px 50px 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #ffd400;
+    color: #000;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 4px 8px;
+    text-transform: uppercase;
+    border-radius: 0;
+    pointer-events: none;
+}
+
+.card1-content {
+    padding: 16px;
+    text-align: left;
+    position: relative;
+    padding: 1rem;
+}
+
+.card1-content h3 {
+    font-size: 1.9rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #333;
+    cursor: pointer;
+}
+
+.card1-content p {
+    font-size: 1rem;
+    color: black;
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+
+.card1-buttons {
+    margin-top: -10px; /* Moves the button up */
+    display: flex;
+    gap: 5px;
+    justify-content: space-between;
+}
+
+.card1-buttons a {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #0067b8;
+    color: white;
+    border-radius: 2px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.card1-buttons a:hover {
+    background-color: #004f94;
+}

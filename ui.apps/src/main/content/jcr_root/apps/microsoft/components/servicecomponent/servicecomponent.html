@@ -1,0 +1,71 @@
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+     data-sly-call="${clientlib.css @ categories='microsoft.service'}"/>
+
+<div class="nested-multifield"
+     data-sly-use.model="com.aem.trg.microsoft.core.models.ServiceModel">
+
+    <h2>${model.maintitle}</h2>
+
+    <div class="subtitle-wrapper" data-sly-list.subtitle="${model.links}">
+        <div class="subtitle-block">
+            <div class="subtitle-section">
+                <h3 class="subtitle-heading">${subtitle.subtitle}</h3>
+                <ul class="link-list" data-sly-list.link="${subtitle.linkList}">
+                    <li>
+                        <a href="${link.linkPath}">${link.label}</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    .nested1-multifield1 {
+  padding: 20px;
+  background-color: #f9f9f9;
+  color: #000;
+}
+
+.main-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.subtitle1-wrapper1 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
+}
+
+.subtitle1-block1 {
+  flex: 1 1 45%;
+}
+
+.subtitle1-heading1 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.link1-list1 {
+  list-style: none;
+  padding-left: 0;
+}
+
+.link1-list1 li {
+  margin-bottom: 5px;
+}
+
+.link1-list1 a {
+  color: #0067b8;
+  text-decoration: none;
+}
+
+.link1-list1 a:hover {
+  text-decoration: underline;
+}
+
+</style>

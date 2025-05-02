@@ -1,0 +1,57 @@
+<header class="microsoft-header" data-sly-use.model="com.aem.trg.microsoft.core.models.MicrosoftHeaderModel">
+    <sly data-sly-use.clientlib="core/wcm/components/commons/v1/templates/clientlib.html">
+        <sly data-sly-call="${clientlib.css @ categories='microsoft.header'}" />
+        <sly data-sly-call="${clientlib.js @ categories='microsoft.header'}" />
+    </sly>
+    <div class="brand">
+        <img src="/content/dam/microsoft/images/microsoftImage.png" alt="Brand Logo" class="brand-logo" />
+        <div class="vertical-divider"></div>
+        <a href="${model.link1}" class="brandtext">${model.brandText}</a>
+
+    </div>
+    <nav class="main-nav">
+        <ul data-sly-list.item="${model.navItems}">
+            <li class="nav-item">
+                <a href="${item.url}" class="nav-link">${item.title}</a>
+                <sly data-sly-test.hasDropdown="${item.dropdownItems && !item.dropdownItems.isEmpty}">
+                    <ul class="dropdown" data-sly-list.drop="${item.dropdownItems}">
+                        <li><a href="${drop.link}">${drop.label}</a></li>
+                    </ul>
+                </sly>
+            </li>
+        </ul>
+
+    </nav>
+    <div class="buybutton">
+        <a href="${model.buttonlink}" class="custom-button">${model.buttontext}</a>
+
+    </div>
+    <div class="all-microsoft">
+        <div class="dropdown-container" onclick="toggleDropdown()">
+            <p class="dropdown-toggle">${model.allMicrosoftLinkText}</p>
+
+        </div>
+    </div>
+
+
+    <div class="header-icons">
+
+
+        <a href="${model.searchlink}" class="search-link">${model.searchtext}</a>
+
+        <img src="/content/dam/microsoft/images/search.png"alt="Search Icon" title="Search" />
+        <a href="${model.signinlink}" class="signin-link">${model.signintext}</a>
+        <img src="/content/dam/microsoft/images/user.png" alt="Profile Icon" class="profile-icon" title="Account" />
+    </div>
+
+</header>
+<script>
+    function toggleDropdown() {
+      const dropdown = document.getElementById('dropdownList');
+      dropdown.classList.toggle('show');
+    }
+</script>
+
+
+
+

@@ -15,9 +15,11 @@
         <p>${model.text @ context='html'}</p>
 
         <sly data-sly-test="${model.showButton}">
-            <a href="${model.buttonLink}" class="btn">
+            <a href="${model.buttonLink}"
+               class="btn ${model.customButtonStyle ? 'btn-custom' : ''}">
                 ${model.buttonText}
             </a>
+
         </sly>
 
         <p class="custom-description">${model.description2 @ context='html'}</p>

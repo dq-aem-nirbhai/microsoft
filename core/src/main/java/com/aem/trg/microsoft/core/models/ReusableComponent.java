@@ -43,6 +43,13 @@ public class ReusableComponent implements ComponentExporter {
     private boolean showButton;
     @ValueMapValue
     private String layoutChoice;
+    @ValueMapValue
+    private boolean customButtonStyle;
+
+    public boolean isCustomButtonStyle() {
+        return customButtonStyle;
+    }
+
 
     public String getLayoutChoice() {
         return layoutChoice;

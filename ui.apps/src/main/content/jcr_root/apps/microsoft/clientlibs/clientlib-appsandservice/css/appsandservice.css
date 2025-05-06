@@ -1,0 +1,121 @@
+
+    /* Basic container styles */
+    .image-component {
+        width: 100%;
+        position: relative;
+        background-size: cover;
+    }
+
+    .image-container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .background-image {
+        padding-left: 190px;
+        max-width: 100%;
+        height: auto;
+        object-fit: contain;
+        display: block;
+        position: relative;
+        z-index: 1;
+    }
+
+    /* Overlay styling */
+    .overlay {
+        position: absolute;
+        top: 18%;
+        left: 10%;
+        transform: translateY(-10%);
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding-left: 50px;
+        padding-right: 60px;
+        z-index: 2;
+    }
+
+    .overlay-content {
+        color: black;
+        max-width: 50%;
+    }
+
+    .title {
+        font-size: 3.1rem;
+        margin-bottom: 10px;
+        color: black;
+        font-weight: bold;
+        max-width: 400px;
+        word-wrap: break-word;
+        line-height: 1.3;
+    }
+
+    .text {
+        font-size: 1.2rem;
+        margin-bottom: 40px;
+        color: black;
+        line-height: .5; /* Decreased line height */
+    	max-width: 200px;
+        word-wrap: break-word;
+
+    }
+
+    /* BUTTON GRID - Reduced spacing */
+    .button-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 0px;
+        row-gap: 10px;
+        align-items: flex-start;
+    }
+
+    .button {
+        background-color: #0078d4;
+        color: white;
+        padding: 5px 5px;
+        font-size: 16px;
+        cursor: pointer;
+        text-decoration: none;
+        box-sizing: border-box;
+        transition: background-color 0.3s ease, border 0.2s ease;
+        width: 180px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .button:hover {
+        background-color: #005ea6;
+    }
+
+    .button:focus,
+    .button:active {
+        border: 3px dotted white;
+        outline: none;
+        padding: 7px 17px;
+    }
+
+    /* RESPONSIVE DESIGN */
+    @media (max-width: 768px) {
+        .overlay {
+            flex-direction: column;
+            padding-left: 90px;
+            padding-right: 90px;
+            top: 20%;
+        }
+
+        .overlay-content {
+            max-width: 100%;
+        }
+
+        .button-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+

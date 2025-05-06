@@ -43,5 +43,11 @@ margin:10px;
 .text-container{
 margin:20px;
 }
+.btn-custom {
+    color: #50e6ff;
+    background-color: transparent;
+    border: none;
+}
+
 
 

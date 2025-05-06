@@ -14,7 +14,7 @@ import javax.inject.Inject;
 @Model(adaptables = Resource.class,
         defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL)
 public class ImageTextButton implements ComponentExporter {
-    protected static final String RESOURCE_TYPE = "myFirstAemProject/components/textwithimage";
+    protected static final String RESOURCE_TYPE = "microsoft/components/textwithimage";
 
     @ValueMapValue
     private String fileReference;

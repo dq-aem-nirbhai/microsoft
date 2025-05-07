@@ -1,0 +1,142 @@
+<style>
+    .outer{
+     background-color: #000;
+        display: flex;
+         align-items: center;
+           flex-direction: column;
+             justify-content: center;
+
+    }
+    .outer-wrapper {
+      background-color: #000; /* black background */
+      color: white; /* ensures text is readable */
+      padding: 2rem 0;
+    }
+
+    .content-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .title {
+      font-size: 2rem;
+      font-weight: bold;
+      max-width: 550px;
+      line-height: 1.4;
+      margin-bottom: 1rem;
+      word-break: break-word;
+    }
+
+    .link {
+      color: #50e6ff;
+      text-decoration: none;
+      font-size: 1rem;
+    }
+
+    .link:hover {
+      text-decoration: underline;
+    }
+  .multifield {
+  background-color: #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem 0;
+  gap: 2rem;
+  flex-wrap: nowrap; /* Prevents wrapping */
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+/* Image width adjusted to allow room */
+.image-container img {
+  width: 48vw; /* responsive width */
+  max-width: 662px;
+  height: auto;
+  display: block;
+  border-radius:10px;
+}
+
+/* Conditional margins for spacing */
+.multifield.left .image-container {
+ position:relative;
+ right:30px;
+}
+
+.multifield.right .image-container {
+   position:relative;
+ left:30px;
+}
+
+.text-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 48vw;
+  max-width: 550px;
+}
+.multifield.left .image-container {
+  order: -1;
+
+
+}
+
+.multifield.right .image-container {
+  order: 1;
+}
+
+.text-container {
+  font-size: 16px;
+  color: white;
+  margin: 10px 10px;
+}
+
+.btn-custom, .link a {
+  color: #50e6ff;
+  background-color: transparent;
+  border: none;
+  text-decoration: none;
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+.link a:hover {
+  text-decoration: underline;
+}
+
+</style>
+
+<sly data-sly-use.model="com.aem.trg.microsoft.core.models.WindowsBusiness"/>
+<div class="outer">
+
+    <div class="outer-wrapper">
+        <div class="content-wrapper">
+            <h1 class="title">${model.title}</h1>
+            <a href="${model.link}" class="link">${model.text}</a>
+        </div>
+    </div>
+    <sly data-sly-list.items="${model.lists}">
+        <div class="multifield ${items.layoutChoice}">
+            <!-- Image Section -->
+            <div class="image-container">
+                <img src="${items.fileReference}" alt="Image" />
+            </div>
+
+            <!-- Text + Button Section -->
+            <div class="text-wrapper">
+                <div class="text-container">
+                    <p>${items.text @ context='html'}</p>
+                </div>
+                <div class="link">
+                    <a href="${items.buttonLink}">${items.buttonText}</a>
+                </div>
+            </div>
+        </div>
+
+    </sly>
+
+</div>

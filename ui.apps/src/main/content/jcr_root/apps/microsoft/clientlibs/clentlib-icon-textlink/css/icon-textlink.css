@@ -1,0 +1,59 @@
+    .icons {
+      padding: 40px 20px;
+      background-color: #ffffff;
+      text-align: center;
+    }
+
+    .card-list {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+
+      gap: 1px;
+    }
+
+    .card-item {
+      width: 120px;
+
+      gap: 1px; /* drastically reduced the gap between icons */
+    }
+
+    .card-item {
+      width: 120px; /* narrower card */
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+
+      margin: 0;
+
+      margin: 0; /* remove any default spacing */
+
+      padding: 0;
+    }
+
+    .card-item img {
+      width: 50px;
+      height: 50px;
+
+      margin-bottom: 2px;
+
+      margin-bottom: 2px; /* minimal space between icon and text */
+
+      object-fit: contain;
+    }
+
+    .card-link {
+      font-size: 13px;
+      color: #0067b8;
+      text-decoration: underline;
+      margin: 0;
+      font-weight: 500;
+    }
+
+    .card-link:hover {
+      text-decoration: none;
+      color: #005ba1;
+    }
+

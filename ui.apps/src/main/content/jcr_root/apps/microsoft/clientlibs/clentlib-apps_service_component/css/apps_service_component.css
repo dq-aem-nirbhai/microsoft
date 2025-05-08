@@ -1,0 +1,79 @@
+    .apps-services {
+      padding: 60px 20px;
+      background-color: #f9f9f9;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .section-header {
+      max-width: 1200px;
+      margin: 0 auto 40px auto;
+      text-align: center;
+    }
+
+    .section-header h2 {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 12px;
+      color: #000;
+    }
+
+    .section-header p {
+      font-size: 1rem;
+      color: #333;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .apps-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr); /* 4 items per row */
+      gap: 1px 1px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .text-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .text-group h3 {
+      font-size: 1.125rem;
+      font-weight: 600;
+      color: #000;
+      margin-bottom: 8px;
+    }
+
+    .text-group ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .text-group li {
+      margin-bottom: 6px;
+    }
+
+    .text-group a {
+      color: #0067b8;
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 500;
+      line-height: 1.5;
+      text-decoration: underline;
+    }
+
+
+
+    /* Responsive: 2 columns on tablet, 1 on mobile */
+    @media screen and (max-width: 1024px) {
+      .apps-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      .apps-grid {
+        grid-template-columns: 1fr;
+      }
+    }

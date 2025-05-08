@@ -1,0 +1,19 @@
+
+
+<sly data-sly-use.model="com.aem.trg.microsoft.core.models.CopilotComponent" />
+
+
+<div class="custom-image-component">
+    <div class="custom-image-inner">
+
+        <!-- TEXT BLOCK RIGHT -->
+        <div class="custom-text-block">
+            <h1 class="single-line-title">${model.text @ context='html'}</h1>
+            <p class="custom-description">${model.description2 @ context='html'}</p>
+            <a href="${model.buttonLink}" class="custom-button">${model.buttonText}</a>
+        </div>
+
+        <!-- IMAGE LEFT -->
+        <img src="${model.fileReference}" alt="Copilot Image" class="custom-image" />
+    </div>
+</div>

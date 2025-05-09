@@ -1,0 +1,53 @@
+.service-container {
+  padding: 40px 20px;
+  background-color: #fff;
+  color: #000;
+}
+
+.service-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.service-item {
+  flex: 1 1 30%;
+  min-width: 250px;
+  text-align: center;
+}
+
+.service-title {
+  font-size: 28px;
+  font-weight: 400;
+  margin-bottom: 4px; /* Adjusted spacing */
+}
+
+.service-links {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.service-links li {
+  font-size: 16px;
+  color: #666;
+}
+
+.service-links a {
+  color: #666;
+  text-decoration: none;
+  font-weight: 300;
+  position: relative;
+}
+
+.service-links a::after {
+  margin-left: 5px;
+  font-size: 16px;
+  vertical-align: middle;
+}
+
+.service-links a:hover {
+  color: #000;
+  text-decoration: underline;
+}

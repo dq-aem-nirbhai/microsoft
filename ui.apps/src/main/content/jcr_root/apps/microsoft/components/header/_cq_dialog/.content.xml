@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root
+        xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+        xmlns:cq="http://www.day.com/jcr/cq/1.0"
+        xmlns:jcr="http://www.jcp.org/jcr/1.0"
+        jcr:primaryType="nt:unstructured"
+        jcr:title="Microsoft Header"
+        sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <main
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+
+                    <brandText
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            name="./brandText"
+                            fieldLabel="Brand Text" />
+                    <link1
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                            name="./link1"
+                            fieldLabel="Link"
+                            rootPath="/content" />
+                    <!-- Navigation Items -->
+                    <navItems
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                            composite="{Boolean}true"
+                            fieldLabel="Navigation Items">
+                        <field
+                                jcr:primaryType="nt:unstructured"
+                                name="./navItems"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                            <items jcr:primaryType="nt:unstructured">
+                                <title
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        name="./title"
+                                        fieldLabel="Title" />
+                                <url
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                        name="./url"
+                                        fieldLabel="URL"
+                                        rootPath="/content" />
+                                <!-- Dropdown Items -->
+                                <dropdownItems
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                        composite="{Boolean}true"
+                                        fieldLabel="Dropdown Items">
+                                    <field
+                                            jcr:primaryType="nt:unstructured"
+                                            name="./dropdownItems"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <label
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    name="./label"
+                                                    fieldLabel="Label" />
+                                            <link
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                    name="./link"
+                                                    fieldLabel="Link"
+                                                    rootPath="/content" />
+                                        </items>
+                                    </field>
+                                </dropdownItems>
+                            </items>
+                        </field>
+                    </navItems>
+                    <buutontext
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            name="./buttontext"
+                            fieldLabel="button Text" />
+                    <buttonlink
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                            name="./buttonlink"
+                            fieldLabel="buttonLink"
+                            rootPath="/content" />
+
+                    <allMicrosoftLinkText
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            name="./allMicrosoftLinkText"
+                            fieldLabel="All Microsoft Text" />
+                    <hiddenitems
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                            composite="{Boolean}true"
+                            name="./linkItems"
+                            fieldLabel="Dropdown Items">
+                        <field
+                                jcr:primaryType="nt:unstructured"
+                                name="./linkItems"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                            <items jcr:primaryType="nt:unstructured">
+                                <label
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        name="./text"
+                                        fieldLabel="Label" />
+                                <link
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                        name="./path"
+                                        fieldLabel="Link"
+                                        rootPath="/content"
+                                />
+                            </items>
+                        </field>
+                    </hiddenitems>
+                    <search
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            name="./searchtext"
+                            fieldLabel="search Text"/>
+                    <searchlink
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                            name="./searchlink"
+                            fieldLabel="search Link"
+                            rootPath="/content" />
+
+
+                    <signin
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            name="./signintext"
+                            fieldLabel="Signin Text"/>
+                    <signinlink
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                            name="./signinlink"
+                            fieldLabel="sign Link"
+                            rootPath="/content" />
+
+
+
+                </items>
+            </main>
+        </items>
+    </content>
+</jcr:root>

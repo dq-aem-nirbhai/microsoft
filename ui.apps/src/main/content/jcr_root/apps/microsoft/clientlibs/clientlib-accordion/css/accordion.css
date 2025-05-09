@@ -1,0 +1,96 @@
+.main-container {
+    background-color: white;
+    padding: 70px; /* Updated padding */
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.accordion-container {
+    border-top: 1px solid #ccc;
+}
+
+.accordion-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.accordion-item {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.accordion-question {
+    width: 100%;
+    background: white;
+    border: 1px solid transparent;
+    outline: none;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 16px 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-start;
+    gap: 12px;
+    align-items: center;
+    transition: background 0.2s ease, box-shadow 0.9s ease, border 0.3s ease;
+}
+
+.accordion-question:hover {
+    background: #f9f9f9;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.accordion-question.active {
+    border: 1px dashed black;
+}
+
+.accordion-answer {
+    color: black;
+    padding: 16px 20px;
+    background: #fcfcfc;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    transition: max-height 0.3s ease;
+}
+
+.arrow {
+    transition: transform 0.3s ease;
+    font-weight: bold;
+}
+
+.accordion-question.active .arrow {
+    transform: rotate(90deg);
+}
+
+.hidden {
+    display: none;
+}
+
+.title {
+    margin: 0 0 30px;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #333;
+    text-align: left;
+}
+
+.faq-buttons {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.btn-link {
+    background: none;
+    border: none;
+    color: #0078d4;
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 0.95rem;
+    margin-left: 10px;
+    padding: 0;
+}
+
+.question-text {
+    flex: 1;
+    text-align: left;
+}

@@ -1,0 +1,17 @@
+<sly data-sly-use.clientlib="core/wcm/components/commons/v1/templates/clientlib.html">
+    <sly data-sly-call="${clientlib.css @ categories='microsoft.iconlink'}" />
+</sly>
+<div class="icons" data-sly-use.model="com.aem.trg.microsoft.core.models.IconModel">
+
+    <div class="card-list" data-sly-list.card="${model.cards}">
+        <div class="card-item">
+            <sly data-sly-test.hasImage="${card.fileReference}">
+                <a href="${card.link}" class="card-link">
+                    <img src="${card.fileReference}" alt="${card.title}" />
+                </a>
+            </sly>
+            <a href="${card.link}" class="card-link">${card.title}</a>
+        </div>
+    </div>
+</div>
+

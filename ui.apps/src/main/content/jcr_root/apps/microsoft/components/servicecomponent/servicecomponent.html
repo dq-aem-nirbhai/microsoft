@@ -1,0 +1,21 @@
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+     data-sly-call="${clientlib.css @ categories='microsoft.service'}"/>
+
+<div class="nested-multifield"
+     data-sly-use.model="com.aem.trg.microsoft.core.models.ServiceModel">
+
+    <h2>${model.maintitle}</h2>
+
+    <div class="subtitle-wrapper" data-sly-list.subtitle="${model.links}">
+        <div class="subtitle-block">
+            <div class="subtitle-section">
+                <h3 class="subtitle-heading">${subtitle.subtitle}</h3>
+                <ul class="link-list" data-sly-list.link="${subtitle.linkList}">
+                    <li>
+                        <a href="${link.linkPath}">${link.label}</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

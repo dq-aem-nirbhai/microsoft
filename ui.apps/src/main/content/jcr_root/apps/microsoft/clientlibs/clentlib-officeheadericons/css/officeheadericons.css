@@ -1,62 +1,54 @@
-.learn-more-section {
-padding: 45px 20px;
-background-color: #f8f8f8;
-text-align: center;
+
+    .cta-link {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  color: #0067b8;
+  font-weight: bold;
+  text-decoration: none;
 }
 
-.section-title {
-font-size: 28px;
-font-weight: 600;
-margin-bottom: 10px;
+    .accessory-section {
+      padding: 40px;
+      background: #f8f8f8;
+    }
+    .section-title, .section-description {
+      text-align: center;
+    }
+
+
+    .accessory-section {
+  padding: 40px;
+  background: #f8f8f8;
+}
+.section-title, .section-description {
+  text-align: center;
+}
+.card {
+  flex: 1 1 250px;
+  margin: 10px;
+}
+.card-inner {
+  border: 1px solid #ccc;
+  padding: 15px;
+  text-align: center;
+}
+.card-image {
+  max-width: 100%;
+}
+.card-title {
+  font-weight: bold;
+  margin: 10px 0;
+}
+.card-link {
+  color: #0067b8;
+  font-weight: bold;
+  text-decoration: none;
+}
+.accessory-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.section-description {
-font-size: 16px;
-margin-bottom: 30px;
-color: #333;
-}
 
-.learn-more-items {
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
-gap: 40px;
-}
-
-.learn-more-item {
-width: 180px;
-text-align: center;
-}
-
-.learn-more-link {
-display: flex;
-flex-direction: column;
-align-items: center;
-text-decoration: none;
-color: #000;
-gap: 10px;
-}
-
-.item-icon {
-width: 48px;
-height: 48px;
-object-fit: contain;
-margin-bottom: 8px;
-}
-
-.item-title {
-font-size: 16px;
-font-weight: 500;
-margin-bottom: 4px;
-}
-
-.item-cta {
-color: #0067b8;
-font-weight: bold;
-font-size: 14px;
-text-decoration: underline;
-}
-
-.item-cta:hover {
-text-decoration: none;
-}

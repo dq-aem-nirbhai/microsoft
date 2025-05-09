@@ -14,6 +14,7 @@
         <sly data-sly-list.group="${model.leftColumnGroups}">
             <div class="text-group">
                 <h3>${group.text}</h3>
+                <h3>${group.text1}</h3>
                 <ul>
                     <sly data-sly-list.service="${group.services}">
                         <li><a href="${service.link}">${service.label}</a></li>
@@ -26,6 +27,7 @@
         <sly data-sly-list.group="${model.rightColumnGroups}">
             <div class="text-group">
                 <h3>${group.text}</h3>
+                <h3>${group.text1}</h3>
                 <ul>
                     <sly data-sly-list.service="${group.services}">
                         <li><a href="${service.link}">${service.label}</a></li>

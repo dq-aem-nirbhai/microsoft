@@ -21,5 +21,8 @@ public class LinkItem {
     public String getLink() {
         return link;
     }
+
+
+
 }
 

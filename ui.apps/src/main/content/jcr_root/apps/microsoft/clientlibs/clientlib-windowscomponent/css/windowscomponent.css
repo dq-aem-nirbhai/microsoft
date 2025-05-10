@@ -3,6 +3,7 @@
   width: 100%;
   overflow: hidden;
   font-family: Arial, sans-serif;
+  text-align:center;
 }
 
 .image-container {
@@ -18,34 +19,50 @@
   object-fit: cover;
 }
 
-.overlay {
+/* Krishna bar full width at the top */
+.krishna {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  background-color: #0067B8;
+  color: white;
+  padding: 0px 40px;
+  box-sizing: border-box;
+  z-index: 2;
+  font-size: 1.2rem;
+}
 
+.overlay {
+  position: absolute;
+  top: 60px; /* Height of krishna bar */
+  left: 0;
+  width: 100%;
   display: flex;
-  align-items: center;
-  justify-content: flex-start; /* Align to left */
-  padding: 15rem;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding-left: 40px;
+  padding-top: 40px;
   box-sizing: border-box;
 }
 
 .overlay-content {
-  text-align: left; /* Align text to left */
+  text-align: left;
   color: #ffffff;
   max-width: 800px;
   width: 100%;
+  padding-left: 100px;
+
 }
 
 .title {
-  font-size: 2.9rem;
+  font-size: 1.9rem;
   font-weight: bold;
   margin-bottom: 1rem;
   text-align: left;
   word-wrap: break-word;
-  max-width: 450px;
+  max-width: 339px;
+  margin-right: 120px;
 }
 
 .text {
@@ -61,7 +78,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
-  justify-content: flex-start; /* Align buttons to left */
+  justify-content: flex-start;
 }
 
 .button {
@@ -70,15 +87,16 @@
   background-color: #50E6FF;
   color: #24354E;
   text-decoration: none;
-  border: 2px solid transparent; /* Reserve space for border */
+  border: 2px solid transparent;
   border-radius: 4px;
-  outline: none; /* Remove default focus outline */
+  outline: none;
   transition: all 0.3s ease;
 }
 
 .button:focus {
   border: 2px dotted black;
 }
+
 .button.clicked {
   border: 2px dotted black;
 }

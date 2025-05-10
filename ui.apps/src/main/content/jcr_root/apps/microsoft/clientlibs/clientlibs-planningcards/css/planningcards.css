@@ -1,0 +1,216 @@
+.cart-container {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      padding: 16px;
+      font-family: Arial, sans-serif;
+      transition: all 0.3s ease;
+      width: 330px;
+      height: 370px;
+      position: relative;
+      flex: 0 0 auto;
+      margin-top: 16px;
+      transform: translate(0, -19%);
+    }
+
+    .cart-container.expanded {
+      height: 400px;
+    }
+
+    .home {
+      font-size: 14px;
+      color: white;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 300px;
+      cursor: pointer;
+      height: 45px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .hiddenintially {
+      display: none;
+      color: white;
+      margin-bottom: 16px;
+      font-size: 14px;
+    }
+
+    .two {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+    }
+
+    .list-linkx {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .list-linkx ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      list-style: none;
+      padding-left: 0px;
+    }
+
+    .last ul {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+    }
+
+    .list-linkx a {
+      text-decoration: none;
+      color: white;
+      display: inline-flex;
+      align-items: center;
+      font-size: 14px;
+      line-height: .2;
+    }
+
+    .list-linkx ul li a,
+    .cart-container ul:last-of-type li a {
+      padding-right: 40px;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .cart-container ul:last-of-type li {
+      list-style: none;
+    }
+
+    .buttonbox {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px 0;
+    }
+
+    .button {
+      background-color: white;
+      color: rgb(216, 14, 14);
+      border-radius: 3px;
+      padding: 6px 12px;
+      height: 30px;
+      width: 200px;
+      cursor: pointer;
+      margin-top:20px;
+      margin-bottom: 20px;
+      text-decoration: none;
+      text-align: center;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .button:hover {
+      cursor: pointer;
+    }
+
+    .last ul li a:hover,
+    .list-linkx ul li a:hover {
+      text-decoration: underline;
+    }
+
+    .arrow {
+      transition: transform 0.3s ease, margin-left 0.3s ease;
+      display: inline-block;
+      margin-left: 4px;
+    }
+
+    .arrow.rotate {
+      transform: rotate(90deg);
+    }
+
+    .list-linkx li:hover .arrow {
+      transform: translateX(5px);
+    }
+
+    .homecontent {
+      margin: 0;
+      font-weight: bold;
+    }
+
+    .img-container {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 10px;
+    }
+
+    .mainpart {
+      display: flex;
+      overflow-x: auto;
+      gap: 40px;
+      padding: 20px;
+    }
+
+    .mainpart ul {
+      display: flex;
+      gap: 40px;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      flex-wrap: nowrap;
+      align-items: flex-start;
+    }
+
+    .mainpart ul li {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      flex: 0 0 auto;
+    }
+
+    .cart-container .last ul li a {
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+    }
+
+    .title,
+    .description {
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+
+    .main {
+      padding-left: 30px;
+      align-items: center;
+      width: 100%;
+      overflow-x: auto;
+    }
+
+    .card-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h2 {
+      font-size: 30px;
+
+    }
+
+    .description p {
+      font-size: 15px;
+      padding: 0 30px 0 180px ;
+    }
+    .arrow.rotate {
+      transform: rotate(90deg);
+    }
+    .arrow {
+      transition: transform 0.3s ease, margin-left 0.3s ease;
+      display: inline-block;
+    }

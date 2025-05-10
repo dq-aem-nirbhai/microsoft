@@ -1,0 +1,13 @@
+
+<sly data-sly-use.model="com.aem.trg.microsoft.core.models.OfficeHeaderIcon" />
+
+<div class="accessory-section">
+
+    <h2 class="section-title">${model.sectionTitle}</h2>
+    <a class="cta-link" href="${model.sectionLink}">${model.sectionText}</a>
+
+
+    <sly data-sly-resource="${'accessorycards' @ resourceType='microsoft/components/icontextlink'}" />
+</div>
+
+

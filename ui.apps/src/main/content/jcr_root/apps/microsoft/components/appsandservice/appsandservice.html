@@ -1,0 +1,26 @@
+<sly
+        data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+        data-sly-call="${clientlib.all @ categories='microsoft.appsandservice'}"
+/>
+<sly data-sly-use.appsandservice="com.aem.trg.microsoft.core.models.AppsandService" />
+
+<div class="image-component">
+    <div class="image-container">
+        <img src="${appsandservice.fileReference}" class="background-image" alt="Background Image" />
+
+        <div class="overlay">
+            <div class="overlay-content">
+                <h2 class="title">${appsandservice.title}</h2>
+
+                <p class="text" data-sly-test="${appsandservice.text}" data-sly-unwrap>
+                    ${appsandservice.text @ context='html'}
+                </p>
+
+                <div class="button-grid" data-sly-list.button="${appsandservice.buttons}">
+                    <a class="button" href="${button.link}">${button.text}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,46 @@
+<sly
+        data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+        data-sly-call="${clientlib.all @ categories='microsoft.msbanner'}"
+/>
+
+<sly data-sly-use.office="com.aem.trg.microsoft.core.models.Office" />
+
+<div class="image-component">
+    <div class="image-container">
+
+        <!-- Render Background Image -->
+        <img src="${properties.fileReference}" class="background-image" alt="Background" />
+
+        <!-- Overlay content aligned left -->
+        <div class="overlay">
+            <div class="overlay-content">
+
+                <h2 class="title">${properties.title}</h2>
+
+                <!-- Subtitle (New title line) -->
+                <h3 class="subtitle">${properties.subtitle}</h3>
+
+                <p class="text">${properties.text @ context='html'}</p>
+
+                <!-- Primary Button -->
+                <a href="${properties.linkUrl}">
+                    <button class="button">${properties.buttonText}</button>
+                </a>
+
+                <!-- Dropdown Toggle Button -->
+                <button class="button dropdown-toggle" onclick="toggleDropdown()">
+                    ${properties.buttonText1}
+                </button>
+
+                <!-- Dropdown content (initially hidden) -->
+                <div id="dropdown" class="dropdown-content" style="display: none;">
+                    <ul data-sly-list.item="${properties.dropdownitems}">
+                        <li>
+                            <a href="${item.link}">${item.text1}</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

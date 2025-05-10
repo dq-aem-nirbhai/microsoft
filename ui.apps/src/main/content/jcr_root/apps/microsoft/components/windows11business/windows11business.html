@@ -1,0 +1,33 @@
+<sly data-sly-use.clientlib="core/wcm/components/commons/v1/templates/clientlib.html">
+    <sly data-sly-call="${clientlib.css @ categories='microsoft.windows11Business'}" />
+</sly>
+<sly data-sly-use.model="com.aem.trg.microsoft.core.models.WindowsBusiness"/>
+<div class="outer">
+
+    <div class="outer-wrapper">
+        <div class="content-wrapper">
+            <h1 class="title">${model.title}</h1>
+            <a href="${model.link}" class="link">${model.text}</a>
+        </div>
+    </div>
+    <sly data-sly-list.items="${model.lists}">
+        <div class="multifield ${items.layoutChoice}">
+            <!-- Image Section -->
+            <div class="image-container">
+                <img src="${items.fileReference}" alt="Image" />
+            </div>
+
+            <!-- Text + Button Section -->
+            <div class="text-wrapper">
+                <div class="text-container">
+                    <p>${items.text @ context='html'}</p>
+                </div>
+                <div class="link">
+                    <a href="${items.buttonLink}">${items.buttonText}</a>
+                </div>
+            </div>
+        </div>
+
+    </sly>
+
+</div>

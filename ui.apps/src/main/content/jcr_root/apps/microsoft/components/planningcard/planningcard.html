@@ -1,0 +1,60 @@
+
+<sly data-sly-use.clientlib="core/wcm/components/commons/v1/templates/clientlib.html">
+    <sly data-sly-call="${clientlib.all @ categories='microsoft.Planning Cards'}" />
+</sly>
+
+
+
+<sly data-sly-use.model="com.aem.trg.microsoft.core.models.PlanningCard" />
+<div class="main">
+    <div class="title">
+        <h2>${model.title}</h2>
+    </div>
+
+    <div class="description">
+        <p>${model.description @ context='html'}</p>
+    </div>
+
+    <div class="mainpart">
+        <ul data-sly-list.listofitems="${model.items}">
+            <li>
+                <div class="card-wrapper">
+                    <div class="img-container">
+                        <img src="${listofitems.fileReference}" alt="image" width="430px" height="500px" />
+                    </div>
+
+                    <div class="cart-container" style="background-color: ${listofitems.backgroundColor @ context='styleString'}">
+                        <div class="home" data-index="${list.index}" style="background-color: ${listofitems.backgroundColor @ context='styleString'}">
+                            <p class="homecontent">
+                                <span class="arrow">&gt;</span> ${listofitems.title1}
+                            </p>
+                        </div>
+
+                        <div class="two">
+                            <p class="hiddenintially">${listofitems.title2}</p>
+                        </div>
+
+                        <div class="list-linkx">
+                            <ul data-sly-list.links="${listofitems.listoflinks}">
+                                <li>
+                                    <a href="${links.link}">${links.text}<span class="arrow">&gt;</span></a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="buttonbox">
+                            <a href="${listofitems.buttonLink}" class="button" style="color: ${listofitems.backgroundColor @ context='styleString'}">${listofitems.buttonText}</a>
+                        </div>
+
+                        <div class="last">
+                            <ul>
+                                <li><a href="${listofitems.link}">${listofitems.linktext} &gt;</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+

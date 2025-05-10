@@ -1,0 +1,21 @@
+<sly data-sly-use.clientlib="core/wcm/components/commons/v1/templates/clientlib.html">
+    <sly data-sly-call="${clientlib.css @ categories='microsoft.officefootericons'}"/>
+</sly>
+<sly data-sly-use.model="com.aem.trg.microsoft.core.models.OfficeFooterIcon" />
+
+
+<div class="learn-more-section">
+    <h2 class="section-title">${model.title}</h2>
+    <p class="section-description">${model.sectionDescription}</p>
+
+    <div class="learn-more-items" data-sly-list.item="${model.learnMoreItems}">
+        <div class="learn-more-item">
+            <a href="${item.link}" class="learn-more-link">
+                <img src="${item.icon}" alt="${item.title}" class="item-icon"/>
+                <span class="item-title">${item.title}</span>
+                <span class="item-cta">Learn More ></span>
+            </a>
+        </div>
+    </div>
+</div>
+

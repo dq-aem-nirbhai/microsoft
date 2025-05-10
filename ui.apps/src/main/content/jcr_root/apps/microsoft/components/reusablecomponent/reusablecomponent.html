@@ -3,7 +3,7 @@
     <sly data-sly-call="${clientlib.all @ categories='microsoft.reusable'}" />
 </sly>
 
-<div class="image-text-button ${model.layoutChoice}"><!-- or right, based on a future model property -->
+<div class="image-text-button ${model.layoutChoice}" style="background-color: ${model.backgroundColor @ context='html'}"><!-- or right, based on a future model property -->
 
     <!-- Image Section -->
     <div class="image-container">

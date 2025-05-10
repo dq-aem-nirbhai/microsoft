@@ -15,8 +15,7 @@ import javax.inject.Inject;
 
 @Model(adaptables = Resource.class,
         defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL)
-public class ReusableComponent implements ComponentExporter {
-    protected static final String RESOURCE_TYPE = "myFirstAemProject/components/textwithimage";
+public class ReusableComponent {
 
     @ValueMapValue
     private String fileReference;
@@ -24,8 +23,7 @@ public class ReusableComponent implements ComponentExporter {
     @ValueMapValue
     private String text;
 
-    @ChildResource(name = "link")
-    private Resource linkResource;
+
 
     private String link;
     @Inject
@@ -43,13 +41,15 @@ public class ReusableComponent implements ComponentExporter {
     private boolean showButton;
     @ValueMapValue
     private String layoutChoice;
+
+
     @ValueMapValue
-    private boolean customButtonStyle;
+    private String backgroundColor;
 
-    public boolean isCustomButtonStyle() {
-        return customButtonStyle;
+
+    public String getBackgroundColor() {
+        return backgroundColor;
     }
-
 
     public String getLayoutChoice() {
         return layoutChoice;
@@ -59,12 +59,7 @@ public class ReusableComponent implements ComponentExporter {
         return showButton;
     }
 
-    @PostConstruct
-    protected void init() {
-        if (linkResource != null) {
-            link = linkResource.getValueMap().get("href", String.class);
-        }
-    }
+
 
     public String getFileReference() {
         return fileReference;
@@ -90,10 +85,7 @@ public class ReusableComponent implements ComponentExporter {
     }
 
 
-    @Override
-    public String getExportedType() {
-        return RESOURCE_TYPE;
-    }
+
 
 
     public String getDescription2() {

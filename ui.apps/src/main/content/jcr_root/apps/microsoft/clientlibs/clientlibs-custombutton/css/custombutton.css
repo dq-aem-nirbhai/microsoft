@@ -1,0 +1,25 @@
+.sticky-buy-button {
+        position: fixed;
+        top: 20px; /* Changed from bottom to top */
+        right: 20px;
+        background-color: #0067b8;
+        color: #ffffff;
+        padding: 12px 24px;
+        border: 2px dashed transparent;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: bold;
+        z-index: 1000;
+        transition: border 0.3s ease;
+        opacity: 0; /* Initially hidden */
+        pointer-events: none; /* Disable clicks when hidden */
+    }
+
+    .sticky-buy-button.visible {
+        opacity: 1; /* Make button visible */
+        pointer-events: auto; /* Enable clicks */
+    }
+
+    .sticky-buy-button:focus {
+        outline: none;
+    }

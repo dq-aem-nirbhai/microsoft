@@ -1,54 +1,60 @@
-
-    .cta-link {
-  display: block;
-  text-align: center;
-  margin-top: 10px;
-  color: #0067b8;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-    .accessory-section {
-      padding: 40px;
-      background: #f8f8f8;
-    }
-    .section-title, .section-description {
-      text-align: center;
-    }
-
-
-    .accessory-section {
-  padding: 40px;
-  background: #f8f8f8;
-}
-.section-title, .section-description {
+.office-header-section {
+  padding: 60px 20px;
+  background-color: #f4f4f4;
   text-align: center;
 }
-.card {
-  flex: 1 1 250px;
-  margin: 10px;
+
+.office-header-title {
+  font-size: 36px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 20px;
 }
-.card-inner {
-  border: 1px solid #ccc;
-  padding: 15px;
-  text-align: center;
+
+.office-header-description {
+  max-width: 800px;
+  margin: 0 auto 40px;
+  font-size: 18px;
+  color: #333;
+  line-height: 1.6;
 }
-.card-image {
-  max-width: 100%;
-}
-.card-title {
-  font-weight: bold;
-  margin: 10px 0;
-}
-.card-link {
-  color: #0067b8;
-  font-weight: bold;
-  text-decoration: none;
-}
-.accessory-cards {
+
+.office-header-icons {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px; 
 }
 
 
+.office-header-icon-card {
+  width: 160px;
+  text-align: center;
+}
+
+.office-header-icon-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+.office-header-icon-image {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 12px;
+}
+
+.office-header-icon-title {
+  font-size: 16px;
+  font-weight: 500;
+  color: #0067b8;
+  transition: color 0.3s;
+}
+
+.office-header-icon-link:hover .office-header-icon-title {
+  text-decoration: underline;
+  color: #004e8c;
+}

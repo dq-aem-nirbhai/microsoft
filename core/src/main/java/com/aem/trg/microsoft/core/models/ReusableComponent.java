@@ -1,8 +1,10 @@
 package com.aem.trg.microsoft.core.models;
 
+
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.models.annotations.DefaultInjectionStrategy;
 import org.apache.sling.models.annotations.Model;
+
 
 import org.apache.sling.models.annotations.injectorspecific.ValueMapValue;
 
@@ -24,13 +26,13 @@ public class ReusableComponent {
 
 
     private String link;
-    @Inject
+    @ValueMapValue
     private String buttonText;
 
-    @Inject
+    @ValueMapValue
     private String buttonLink;
 
-    @Inject
+    @ValueMapValue
     private String title;
     @ValueMapValue
     private String description2;

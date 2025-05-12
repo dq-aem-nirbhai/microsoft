@@ -21,7 +21,7 @@
                             sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
                             fieldLabel="Title"
                             name="./title"
-                            value="Read Warranty Terms"/>
+                            />
 
                     <description
                             jcr:primaryType="nt:unstructured"
@@ -171,43 +171,16 @@
                             sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
                             fieldLabel="home "
                             name="./title1"
-                            value="Read Warranty Terms"/>
+                           />
                     <title2
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
                             fieldLabel="homeplan"
                             name="./title2"
-                            value="Read Warranty Terms"/>
+                          />
 
-                    <buttonText
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
-                            fieldLabel="Button Text"
-                            name="./buttonText"
-                            value="Read Warranty Terms"/>
-                    <buttonLink
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
-                            fieldLabel="Button Link"
-                            name="./buttonLink"/>
 
-                    <linktext
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
-                            fieldLabel="text"
-                            name="./linktext"
-                            value="Read Warranty Terms"/>
-                    <link
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
-                            fieldLabel="link"
-                            name="./link"/>
-                            <backgroundColor
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="granite/ui/components/coral/foundation/form/colorfield"
-                                    name="./backgroundColor"
-                                    fieldLabel="Background Color"
-                            />
+
 
 
                             <listoflinks
@@ -241,6 +214,35 @@
                             </items>
                         </field>
                     </listoflinks>
+                            <buttonText
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                    fieldLabel="Button Text"
+                                    name="./buttonText"
+                            />
+                            <buttonLink
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                    fieldLabel="Button Link"
+                                    name="./buttonLink"/>
+                            <linktext
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                    fieldLabel="text"
+                                    name="./linktext"
+                            />
+                            <link
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                    fieldLabel="link"
+                                    name="./link"/>
+                            <backgroundColor
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/colorfield"
+                                    name="./backgroundColor"
+                                    fieldLabel="Background Color"
+                            />
+
                         </items>
                     </field>
                     </cards>

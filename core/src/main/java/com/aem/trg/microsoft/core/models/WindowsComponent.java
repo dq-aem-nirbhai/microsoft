@@ -20,6 +20,11 @@ public class WindowsComponent {
     @ValueMapValue
     private String text;
 
+    @ValueMapValue
+    private String extraText;
+
+    @ValueMapValue
+    private String extraLink;
 
     @ChildResource
     private List<LinkItem> buttons; // this will map the multifield
@@ -27,7 +32,6 @@ public class WindowsComponent {
     public List<LinkItem> getButtons() {
         return buttons;
     }
-
 
 
     public String getTitle() {
@@ -42,7 +46,12 @@ public class WindowsComponent {
         return text;
     }
 
+    public String getExtraText() {
+        return extraText;
+    }
+
+    public String getExtraLink() {
+        return extraLink;
+    }
 }
-
-
 

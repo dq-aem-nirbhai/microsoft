@@ -23,6 +23,20 @@
 
                 <items jcr:primaryType="nt:unstructured">
 
+                    <!-- Extra Text -->
+                    <extraText
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            fieldLabel="Extra Text"
+                            name="./extraText"/>
+
+                    <!-- Extra Link -->
+                    <extraLink
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                            fieldLabel="Extra Link"
+                            name="./extraLink"/>
+
                     <!-- Image Upload -->
                     <image
                             jcr:primaryType="nt:unstructured"

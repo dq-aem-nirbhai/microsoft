@@ -1,0 +1,46 @@
+.sticky-nav-container {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        background-color: black;
+        text-align: center;
+        border-bottom: 1px solid white;
+    }
+
+    .sticky-nav-container ul {
+        display: flex;
+        justify-content: center; /* Center the tab group */
+        gap: 190px;               /* Control space between tabs */
+        padding: 0;
+        margin: 20px 0;          /* Reduced vertical spacing */
+        list-style: none;
+    }
+
+    .sticky-nav-container .nav-item {
+        margin: 0;               /* Remove default spacing */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sticky-nav-container .nav-link {
+        color: white;
+        font-weight: 600;
+        text-decoration: none;
+        font-size: 16px;
+        padding: 0.5rem 1rem;
+
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .sticky-nav-container .nav-link.clicked {
+        border: 2px dashed white;
+        border-bottom: none;
+        background-color: rgba(255, 255, 255, 0.05);
+    }
+
+    .sticky-nav-container .nav-link:hover {
+        opacity: 0.85;
+    }

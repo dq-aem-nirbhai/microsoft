@@ -1,0 +1,197 @@
+<sly
+        data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+        data-sly-call="${clientlib.all @ categories='microsoft.office'}"
+/>
+
+<sly data-sly-use.office="com.aem.trg.microsoft.core.models.Office" />
+
+<div class="image-component-office">
+    <div class="image-container-office">
+        <!-- Render Background Image -->
+        <img src="${properties.fileReference}" class="background-image-office" alt="Background Image" />
+
+        <!-- Overlay content aligned to the left -->
+        <div class="overlay-office">
+            <div class="overlay-content-office">
+                <!-- Main Title -->
+                <h2 class="title-office">${properties.title}</h2>
+
+                <!-- Rich Text Description -->
+                <p class="text-office" data-sly-test="${properties.text}" data-sly-unwrap>
+                    ${properties.text @ context='html'}
+                </p>
+
+                <!-- Primary Button -->
+                <a href="${properties.linkUrl}" class="button-link">
+                    <button class="button">${properties.buttonText}</button>
+                </a>
+
+                <!-- Dropdown Toggle Button -->
+                <button class="button dropdown-toggle" onclick="toggleDropdown(this)">
+                    ${properties.buttonText1}
+                    <span class="arrow">v</span> <!-- Down arrow -->
+                </button>
+
+                <!-- Dropdown Content -->
+                <div class="dropdown-content" style="display: none;">
+                    <ul data-sly-list.item="${office.dropdownItems}">
+                        <li>
+                            <a href="${item.link}">${item.text1}</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+
+
+    /* Image Component Wrapper */
+    .image-component-office {
+        width: 100%;
+        position: relative;
+    }
+
+    /* Image Container */
+    .image-container-office {
+        position: relative;
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+    }
+
+    /* Background Image - fixed zoom */
+    .background-image-office {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        display: block;
+        position: relative;
+        z-index: 1;
+    }
+
+    /* Overlay Styling */
+    .overlay-office {
+        position: absolute;
+        top: 30%;
+        left: 3%;
+        transform: translateY(-10%);
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding-left: 120px;
+        padding-right: 60px;
+        z-index: 2;
+    }
+
+    /* Overlay Content */
+    .overlay-content-office {
+        color: black;
+        max-width: 35%;
+    }
+
+    /* Title Styling */
+    .title-office {
+        font-size: 3rem;
+        margin-bottom: 10px;
+        color: black;
+
+    }
+
+    /* Description Text */
+    .text-office {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+        color: black;
+
+    }
+
+
+    /* Dropdown Content Styling */
+    .dropdown-content {
+
+        color:black;
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin-top: 10px;
+        width: 200px;
+        height:200px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        position: absolute;
+        top: 100%;
+        left: 19.5%;
+        z-index: 3;
+    }
+
+    /* Dropdown List Reset */
+    .dropdown-content ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    /* Dropdown List Item */
+    .dropdown-content li a {
+        display: block;
+        padding: 5px 10px;
+        color: #333;
+        text-decoration: none;
+    }
+
+    .dropdown-content li a:hover {
+        background-color: #f0f0f0;
+        padding:10px;
+    }
+
+
+
+    .button {
+            background-color: #0078d4;
+            color: white;
+            border: none;
+            padding: 10px 10px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        .button.dropdown-toggle.active {
+            background-color: white;
+            color: #0078d4;
+            border: 2px dotted #0078d4;
+        }
+
+        .dropdown-content {
+            margin-top: 10px;
+            background: #0067B3;
+            padding: 10px;
+
+        }
+
+        .dropdown-content ul {
+            list-style: none;
+            padding: 0px;
+            margin: 0;
+        }
+
+        .dropdown-content li {
+            margin: 10px 0;
+        }
+
+        .dropdown-content a {
+            text-decoration: none;
+            color: #0078d4;
+        }
+
+        .arrow {
+            margin-left: 4px;
+
+        }
+
+</style>
+
+
+

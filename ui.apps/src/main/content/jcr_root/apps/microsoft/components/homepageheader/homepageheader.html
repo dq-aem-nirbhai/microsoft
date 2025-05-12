@@ -8,39 +8,67 @@
 
 
 
-        <div class="microsoft-header">
-            <div class="header-left">
-                <a href="${model.link}" class="logo">
-                    <img src="${model.fileReference}" alt="Microsoft Logo" />
+    <div class="microsoft-header">
+
+
+
+        <div class="header-left">
+
+            <a href="${model.link}" class="logo">
+                <img src="${model.fileReference}" alt="Microsoft Logo" />
+            </a>
+
+            <nav class="nav-items">
+                <ul>
+                    <sly data-sly-list.navItem="${model.navItems}">
+                        <li><a href="${navItem.url}">${navItem.title}</a></li>
+                    </sly>
+                </ul>
+            </nav>
+
+
+        </div>
+
+
+
+
+
+        <div class="header-right">
+
+
+            <div class="all-microsoft-wrapper">
+
+                <div id="allmicrosoft-component" style="display: none;" class="abs">
+                    <sly data-sly-resource="${'allmicro' @ resourceType='microsoft/components/allmicrosoft'}" />
+                </div>
+                <a href="#" class="all-microsoft-link" id="toggle-allmicrosoft">
+                    ${model.allMicrosoftLinkText}
                 </a>
-                <nav class="nav-items">
-                    <ul>
-                        <sly data-sly-list.navItem="${model.navItems}">
-                            <li><a href="${navItem.url}">${navItem.title}</a></li>
-                        </sly>
-                    </ul>
-                </nav>
+
+
             </div>
 
-            <div class="header-right">
-                <div class="all-microsoft-link">
-                    <a href="${model.allMicrosoftLink}">
-                        <span class="allmicrosoft">${model.allMicrosoftLinkText}</span>
+
+
+
+
+            <div class="header-icons">
+
+                <div class="nav-search-icons">
+                    <input type="text" placeholder="🔍" class="search-box" />
+
+                    <a href="${model.searchlink}" title="${model.searchtitle}" class="search-icon">
+                        <span class="search-icon">${model.searchtitle}</span>
+                        <img src="${model.searchicon}" alt="Search Icon" class="search-icon" />
                     </a>
+
+                    <button class="menu-toggle">
+                        <i class="fas fa-bars">Cancel</i>
+                    </button>
                 </div>
-                <div class="header-icons">
-                    <div class="nav-search-icons">
-                        <input type="text" placeholder="🔍" class="search-box" />
 
-                        <a href="${model.searchlink}" title="${model.searchtitle}" class="search-icon">
-                            <span class="search-icon">${model.searchtitle}</span>
-                            <img src="${model.searchicon}" alt="Search Icon" class="search-icon" />
-                        </a>
 
-                        <button class="menu-toggle">
-                            <i class="fas fa-bars">Cancel</i>
-                        </button>
-                    </div>
+                <div class="icons">
 
                     <a href="${model.cartlink}" title="${model.carttitle}" class="icon">
                         <span>${model.carttitle}</span>
@@ -51,11 +79,16 @@
                         <img src="${model.signinicon}" alt="Sign In Icon" />
                     </a>
                 </div>
+
+
             </div>
+
+
+
         </div>
 
 
 
-
+    </div>
     </sly>
 </header>

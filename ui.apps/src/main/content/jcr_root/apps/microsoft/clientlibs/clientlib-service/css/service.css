@@ -1,7 +1,8 @@
 .nested-multifield {
-  padding: 40px 20px;
-  max-width: 1200px;
+  padding: 40px 130px;
+  max-width: 1430px;
   margin: auto;
+  background-color:white;
 }
 
 .nested-multifield h2 {

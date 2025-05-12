@@ -5,10 +5,11 @@ import org.apache.sling.api.resource.Resource;
 import org.apache.sling.models.annotations.DefaultInjectionStrategy;
 import org.apache.sling.models.annotations.Model;
 
-import org.apache.sling.models.annotations.injectorspecific.ChildResource;
+
 import org.apache.sling.models.annotations.injectorspecific.ValueMapValue;
 
 
+import javax.inject.Inject;
 
 
 
@@ -22,8 +23,7 @@ public class ReusableComponent {
     @ValueMapValue
     private String text;
 
-    @ChildResource(name = "link")
-    private Resource linkResource;
+
 
     private String link;
     @ValueMapValue
@@ -41,6 +41,15 @@ public class ReusableComponent {
     private boolean showButton;
     @ValueMapValue
     private String layoutChoice;
+
+
+    @ValueMapValue
+    private String backgroundColor;
+
+
+    public String getBackgroundColor() {
+        return backgroundColor;
+    }
 
     public String getLayoutChoice() {
         return layoutChoice;
@@ -74,7 +83,6 @@ public class ReusableComponent {
         }
         return buttonLink;
     }
-
 
 
 

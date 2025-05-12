@@ -1,0 +1,32 @@
+<sly
+        data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+        data-sly-call="${clientlib.all @ categories='microsoft.windowscomponent'}"
+/>
+<sly data-sly-use.windowscomponent="com.aem.trg.microsoft.core.models.WindowsComponent" />
+
+<div class="image-component">
+    <div class="image-container">
+        <img src="${windowscomponent.fileReference}" class="background-image" alt="Background Image" />
+
+        <!-- Krishna bar at the top -->
+        <div class="krishna">
+            <p>${windowscomponent.extraText @context='html'}</p>
+
+        </div>
+
+        <!-- Overlay content -->
+        <div class="overlay">
+            <div class="overlay-content">
+                <h2 class="title">${windowscomponent.title}</h2>
+
+                <p class="text" data-sly-test="${windowscomponent.text}" data-sly-unwrap>
+                    ${windowscomponent.text @ context='html'}
+                </p>
+
+                <div class="button-grid" data-sly-list.button="${windowscomponent.buttons}">
+                    <a class="button" href="${button.link}">${button.text}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

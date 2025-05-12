@@ -63,6 +63,21 @@
       text-decoration: underline;
     }
 
+   .text-group h3 {
+     font-size: 1.125rem;
+     color: #000;
+     line-height: 1.2;
+     margin: 0;
+   }
+
+   .text-group h3:first-of-type {
+     font-weight: 700;
+     margin-bottom: 4px; /* Small space between text and text1 */
+   }
+
+   .text-group h3:nth-of-type(2) {
+     font-weight: 600;
+   }
 
 
     /* Responsive: 2 columns on tablet, 1 on mobile */

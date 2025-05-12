@@ -1,20 +1,19 @@
 package com.aem.trg.microsoft.core.models;
 
-import com.adobe.cq.export.json.ComponentExporter;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.models.annotations.DefaultInjectionStrategy;
 import org.apache.sling.models.annotations.Model;
-import org.apache.sling.models.annotations.injectorspecific.ChildResource;
+
 import org.apache.sling.models.annotations.injectorspecific.ValueMapValue;
 
-import javax.annotation.PostConstruct;
+
 import javax.inject.Inject;
+
 
 
 @Model(adaptables = Resource.class,
         defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL)
-public class ReusableComponent implements ComponentExporter {
-    protected static final String RESOURCE_TYPE = "microsoft/components/textwithimage";
+public class ReusableComponent {
 
     @ValueMapValue
     private String fileReference;
@@ -22,8 +21,7 @@ public class ReusableComponent implements ComponentExporter {
     @ValueMapValue
     private String text;
 
-    @ChildResource(name = "link")
-    private Resource linkResource;
+
 
     private String link;
     @Inject
@@ -34,24 +32,21 @@ public class ReusableComponent implements ComponentExporter {
 
     @Inject
     private String title;
-
     @ValueMapValue
     private String description2;
 
     @ValueMapValue
     private boolean showButton;
-
     @ValueMapValue
     private String layoutChoice;
 
-    @ValueMapValue
-    private boolean customButtonStyle;
 
     @ValueMapValue
-    private String backgroundColor; // Injecting the backgroundColor field
+    private String backgroundColor;
 
-    public boolean isCustomButtonStyle() {
-        return customButtonStyle;
+
+    public String getBackgroundColor() {
+        return backgroundColor;
     }
 
     public String getLayoutChoice() {
@@ -62,39 +57,6 @@ public class ReusableComponent implements ComponentExporter {
         return showButton;
     }
 
-    @PostConstruct
-    protected void init() {
-        if (linkResource != null) {
-            link = linkResource.getValueMap().get("href", String.class);
-        }
-    }
-
-    public String getBackgroundColor() {
-        /*if (backgroundColor != null && backgroundColor.matches("^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$")) {
-            return backgroundColor;
-        }
-        return null;*/ // or return a default color
-        return backgroundColor;
-    }
-
-    public String getTextColorClass() {
-        if (backgroundColor == null) {
-            return ""; // fallback
-        }
-
-        // Normalize to lowercase and remove spaces
-        String color = backgroundColor.toLowerCase().trim();
-
-        // Check common values (expand as needed)
-        if (color.equals("#000000") || color.equals("black")) {
-            return "text-white";
-        } else if (color.equals("#ffffff") || color.equals("white")) {
-            return "text-black";
-        }
-
-        // Optionally, add more logic to check contrast dynamically or return a default
-        return "text-black"; // safe default
-    }
 
 
     public String getFileReference() {
@@ -120,17 +82,15 @@ public class ReusableComponent implements ComponentExporter {
         return buttonLink;
     }
 
-    @Override
-    public String getExportedType() {
-        return RESOURCE_TYPE;
-    }
+
+
 
     public String getDescription2() {
         return description2;
     }
 
+
     public String getTitle() {
         return title;
     }
 }
-

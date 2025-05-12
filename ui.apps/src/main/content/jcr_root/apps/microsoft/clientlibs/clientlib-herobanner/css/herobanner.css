@@ -6,36 +6,20 @@
 
 .image-container {
     position: relative;
-    height: 400px;
+    height: 500px;
 }
 
 .image {
     width: 100%;
-
+    height:100%;
     object-fit: cover;
 }
 
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-
-    display: flex;
-    justify-content: flex-start; /* Aligns to left */
-    align-items: center;         /* Vertically center */
-    padding-left: 60px;
-    padding-right: 60px;
-}
-
-.overlay-content {
-    color: white;
-    max-width: 50%;
-}
 
 .title {
     font-size: 2rem;
     margin-bottom: 10px;
+    color:white;
 }
 
 .text {
@@ -59,7 +43,7 @@
 }
 .overlay {
     position: absolute;
-    top: 50%;
+    top: 28%;
     left: 0;
     transform: translateY(-10%);
     width: 100%;
@@ -72,5 +56,5 @@
 
 .overlay-content {
     color: white;
-    max-width: 50%;
+    max-width: 29%;
 }

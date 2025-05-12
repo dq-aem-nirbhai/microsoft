@@ -1,0 +1,31 @@
+<sly data-sly-use.clientlib="core/wcm/components/commons/v1/templates/clientlib.html">
+    <sly data-sly-call="${clientlib.css @ categories='microsoft.customtab'}"/>
+    <sly data-sly-call="${clientlib.js @ categories='microsoft.customtab'}" />
+</sly>
+
+
+
+
+<div class="sticky-nav-container">
+    <ul class="nav">
+        <sly data-sly-use.navModel="com.aem.trg.microsoft.core.models.CustomTab">
+            <sly data-sly-list.item="${navModel.items}">
+                <li class="nav-item">
+                    <a class="nav-link" href="#${item.anchorId}" target="_self">
+                        ${item.label}
+                    </a>
+                </li>
+            </sly>
+        </sly>
+    </ul>
+</div>
+
+
+<sly data-sly-list.card="${navModel.tabs}">
+    <li id="${card.id}">
+        <div data-sly-resource="${card.resourceType @ resourceType=card.resourceType}"></div>
+    </li>
+</sly>
+
+
+

@@ -15,23 +15,7 @@
             jcr:primaryType="nt:unstructured"
             sling:resourceType="granite/ui/components/coral/foundation/container">
         <items jcr:primaryType="nt:unstructured">
-            <tabs
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="granite/ui/components/coral/foundation/tabs"
-                    maximized="{Boolean}true">
-                <items jcr:primaryType="nt:unstructured">
-                    <asset
-                            jcr:primaryType="nt:unstructured"
-                            jcr:title="Asset"
-                            sling:resourceType="granite/ui/components/coral/foundation/container"
-                            margin="{Boolean}true">
-                        <items jcr:primaryType="nt:unstructured">
-                            <columns
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
-                                    margin="{Boolean}true">
-                                <items jcr:primaryType="nt:unstructured">
-                                    <column
+     <column
                                             jcr:primaryType="nt:unstructured"
                                             sling:resourceType="granite/ui/components/coral/foundation/container">
                                         <items jcr:primaryType="nt:unstructured">
@@ -172,7 +156,7 @@
                                                     value="Read Warranty Terms"/>
                                             <buttonLink
                                                     jcr:primaryType="nt:unstructured"
-                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
                                                     fieldLabel="Button Link"
                                                     name="./buttonLink"/>
                                             <description2
@@ -304,13 +288,6 @@
                                                     value="true"
                                                     uncheckedValue="false"
                                                     defaultChecked="true"/>
-                                            <customButtonStyle
-                                                    jcr:primaryType="nt:unstructured"
-                                                    sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
-                                                    name="./customButtonStyle"
-                                                    text="Apply Custom Button Style"
-                                                    value="true"
-                                                    uncheckedValue="false" />
 
                                             <layoutChoice
                                                     jcr:primaryType="nt:unstructured"
@@ -333,19 +310,16 @@
                                                 </items>
                                             </layoutChoice>
 
+                              <backgroundColor
+                                     jcr:primaryType="nt:unstructured"
+                                     sling:resourceType="granite/ui/components/coral/foundation/form/colorfield"
+                                     name="./backgroundColor"/>
 
                                         </items>
                                     </column>
                                 </items>
-                            </columns>
-                        </items>
-                    </asset>
-                    <cq:styles
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="granite/ui/components/coral/foundation/include"
-                            path="/mnt/overlay/cq/gui/components/authoring/dialog/style/tab_edit/styletab"/>
-                </items>
-            </tabs>
-        </items>
+
+
+
     </content>
 </jcr:root>

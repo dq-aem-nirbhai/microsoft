@@ -2,7 +2,7 @@
   position: relative;
   width: 100%;
   overflow: hidden;
-  font-family: Arial, sans-serif;
+  font-family: "Segoe UI", Arial, sans-serif;
   text-align:center;
 }
 
@@ -19,12 +19,46 @@
   object-fit: cover;
 }
 
+
+.krishna {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 80%;
+   background-color: #0067B8;
+   color: white;
+   padding: 1px 50px;
+   font-size: 1.1rem;
+   z-index: 2;
+
+
+   display: flex;
+   justify-content: center; /* centers content horizontally */
+   align-items: center;
+   text-align: center;
+ }
+
+.krishna .learn-more {
+  color: white;
+  font-weight: bold;
+  margin-left: 8px;
+  text-decoration: none;
+}
+
+.krishna .learn-more:hover {
+  text-decoration: none;
+}
+
+.overlay {
+
 /* Krishna bar full width at the top */
 .krishna {
   position: absolute;
-  top: 0;
+  top: 60px; /* below notification bar */
   left: 0;
   width: 100%;
+  padding-left: 60px;
+  padding-top: 60px;
   background-color: #0067B8;
   color: white;
   padding: 0px 40px;
@@ -44,9 +78,19 @@
   padding-left: 40px;
   padding-top: 40px;
   box-sizing: border-box;
+  display: flex;
+  align-items: flex-start;
+  margin-left: 70px;
 }
 
 .overlay-content {
+  max-width: 334px;
+  color: #ffffff;
+  text-align: left;
+}
+
+.title {
+  font-size: 2rem; /* equals 36px */
   text-align: left;
   color: #ffffff;
   max-width: 800px;
@@ -58,6 +102,7 @@
 .title {
   font-size: 1.9rem;
   font-weight: bold;
+  line-height: 1.2;
   margin-bottom: 1rem;
   text-align: left;
   word-wrap: break-word;
@@ -67,11 +112,8 @@
 
 .text {
   font-size: 1.2rem;
-  margin-bottom: 1.5rem;
-  line-height: 1.5;
-  text-align: left;
-  word-wrap: break-word;
-  max-width: 400px;
+  line-height: 1.6;
+  margin-bottom: 2rem;
 }
 
 .button-grid {
@@ -82,10 +124,11 @@
 }
 
 .button {
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
   background-color: #50E6FF;
   color: #24354E;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 6px;
   text-decoration: none;
   border: 2px solid transparent;
   border-radius: 4px;
@@ -93,10 +136,11 @@
   transition: all 0.3s ease;
 }
 
-.button:focus {
-  border: 2px dotted black;
+.button:hover {
+  background-color: #3ecce5;
 }
 
+.button:focus {
 .button.clicked {
   border: 2px dotted black;
 }

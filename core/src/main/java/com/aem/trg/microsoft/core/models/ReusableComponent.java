@@ -1,7 +1,6 @@
 package com.aem.trg.microsoft.core.models;
 
 
-import com.adobe.cq.export.json.ComponentExporter;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.models.annotations.DefaultInjectionStrategy;
 import org.apache.sling.models.annotations.Model;
@@ -9,16 +8,13 @@ import org.apache.sling.models.annotations.Model;
 import org.apache.sling.models.annotations.injectorspecific.ChildResource;
 import org.apache.sling.models.annotations.injectorspecific.ValueMapValue;
 
-import javax.annotation.PostConstruct;
-import javax.inject.Inject;
 
 
 
 
 @Model(adaptables = Resource.class,
         defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL)
-public class ReusableComponent implements ComponentExporter {
-    protected static final String RESOURCE_TYPE = "myFirstAemProject/components/textwithimage";
+public class ReusableComponent {
 
     @ValueMapValue
     private String fileReference;
@@ -30,13 +26,13 @@ public class ReusableComponent implements ComponentExporter {
     private Resource linkResource;
 
     private String link;
-    @Inject
+    @ValueMapValue
     private String buttonText;
 
-    @Inject
+    @ValueMapValue
     private String buttonLink;
 
-    @Inject
+    @ValueMapValue
     private String title;
     @ValueMapValue
     private String description2;
@@ -54,12 +50,7 @@ public class ReusableComponent implements ComponentExporter {
         return showButton;
     }
 
-    @PostConstruct
-    protected void init() {
-        if (linkResource != null) {
-            link = linkResource.getValueMap().get("href", String.class);
-        }
-    }
+
 
     public String getFileReference() {
         return fileReference;
@@ -85,10 +76,7 @@ public class ReusableComponent implements ComponentExporter {
     }
 
 
-    @Override
-    public String getExportedType() {
-        return RESOURCE_TYPE;
-    }
+
 
 
     public String getDescription2() {

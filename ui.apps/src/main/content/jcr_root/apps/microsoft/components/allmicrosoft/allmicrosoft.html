@@ -2,38 +2,35 @@
     <sly data-sly-call="${clientlib.css @ categories='microsoft.allmicrosoft'}" />
 </sly>
 
-<div class="footer-container">
-    <div class="footer-fragment">
+<div class="allmicrosoft-container">
+    <div class="allmicrosoft-fragment">
         <sly data-sly-use.model="com.aem.trg.microsoft.core.models.AllMicrosoft" />
 
         <!-- Always render the list, even if empty -->
-        <ul class="links" data-sly-list.listoflink="${model.links}">
+        <ul class="allmicrosoft-links" data-sly-list.listoflink="${model.links}">
             <li>
-                <a href="${listoflink.link}" class="footer-link-text">${listoflink.text}</a>
+                <a href="${listoflink.link}" class="allmicrosoft-link-text">${listoflink.text}</a>
             </li>
             <!-- Divider -->
-            <hr class="footer-divider" />
+            <hr class="allmicrosoft-divider" />
         </ul>
 
-
-
         <!-- Nested multifield items -->
-        <ul data-sly-list.listofitem="${model.items}" class="one">
+        <ul data-sly-list.listofitem="${model.items}" class="allmicrosoft-one">
             <li>
-                <p class="footer-title">${listofitem.title}</p>
-                <ul class="footer-link-list">
+                <p class="allmicrosoft-title">${listofitem.title}</p>
+                <ul class="allmicrosoft-link-list">
                     <sly data-sly-list.link="${listofitem.listoflinks1}">
-                        <li class="footer-link-item">
-                            <a href="${link.link}" class="footer-link-text">${link.text}</a>
+                        <li class="allmicrosoft-link-item">
+                            <a href="${link.link}" class="allmicrosoft-link-text">${link.text}</a>
                         </li>
                     </sly>
                 </ul>
             </li>
         </ul>
-
     </div>
 
-    <div class="end">
+    <div class="allmicrosoft-end">
         <a href="${model.sitemaplink}">${model.sitemap}</a>
     </div>
 </div>

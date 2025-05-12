@@ -1,0 +1,25 @@
+<sly data-sly-use.clientlib="core/wcm/components/commons/v1/templates/clientlib.html">
+    <sly data-sly-call="${clientlib.css @ categories='microsoft.copilotcomponent'}"/>
+</sly>
+
+<sly data-sly-use.model="com.aem.trg.microsoft.core.models.CopilotComponent" />
+
+<div class="copilot-component">
+    <div class="copilot-inner">
+
+        <!-- TEXT BLOCK LEFT -->
+        <div class="copilot-text">
+            <h1 class="copilot-title">${model.title @ context='html'}</h1>
+            <p class="copilot-description">${model.description2 @ context='html'}</p>
+            <a href="${model.buttonLink}" class="copilot-button">${model.buttonText}</a>
+        </div>
+
+        <!-- IMAGE RIGHT -->
+        <img src="${model.fileReference}" alt="Copilot Image" class="copilot-image" />
+    </div>
+</div>
+
+
+
+
+

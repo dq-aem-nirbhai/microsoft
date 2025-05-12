@@ -48,11 +48,18 @@ public class AppsServiceComponent {
         @ValueMapValue
         private String text;
 
+        @ValueMapValue
+        private String text1;
+
         @ChildResource(name = "services")
         private List<ServiceEntry> services;
 
         public String getText() {
             return text;
+        }
+
+        public String getText1() {
+            return text1;
         }
 
         public List<ServiceEntry> getServices() {

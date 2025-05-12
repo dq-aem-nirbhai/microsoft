@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2025-05-12T09:35:59.824+05:30"
+        cq:lastModifiedBy="admin"
+        cq:tags="[experience-fragments:variation/web]"
+        cq:template="/conf/microsoft/settings/wcm/templates/xf-web-variation"
+        cq:xfMasterVariation="{Boolean}true"
+        cq:xfVariantType="web"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="warrantyheader"
+        sling:resourceType="microsoft/components/xfpage">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="microsoft/components/container"
+            layout="responsiveGrid">
+            <header
+                jcr:created="{Date}2025-04-28T15:13:52.500+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2025-05-12T09:35:59.809+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="microsoft/components/header"
+                allMicrosoftLinkText="All Microsoft"
+                brandText="Support"
+                buttonlink="https://www.microsoft.com/en-in/"
+                buttontext="Buy Microsoft 365"
+                link1="https://google.com"
+                searchlink="https://www.microsoft.com/en-in/"
+                searchtext="Search"
+                signinlink="https://www.microsoft.com/en-in/"
+                signintext="SignIn">
+                <navItems jcr:primaryType="nt:unstructured">
+                    <item0
+                        jcr:primaryType="nt:unstructured"
+                        title="Microsoft 365"
+                        url="https://www.microsoft.com/en-in/"/>
+                    <item1
+                        jcr:primaryType="nt:unstructured"
+                        title="office"
+                        url="https://www.microsoft.com/en-in/"/>
+                    <item2
+                        jcr:primaryType="nt:unstructured"
+                        title="Products"
+                        url="https://www.microsoft.com/en-in/">
+                        <dropdownItems jcr:primaryType="nt:unstructured">
+                            <item0
+                                jcr:primaryType="nt:unstructured"
+                                label="Microsoft 365"
+                                link="https://www.microsoft.com/en-in/"/>
+                            <item1
+                                jcr:primaryType="nt:unstructured"
+                                label="Outlook"
+                                link="https://www.microsoft.com/en-in/"/>
+                            <item2
+                                jcr:primaryType="nt:unstructured"
+                                label="Microsoft Teams"
+                                link="https://www.microsoft.com/en-in/"/>
+                            <item3
+                                jcr:primaryType="nt:unstructured"
+                                label="OneDrive"
+                                link="https://www.microsoft.com/en-in/"/>
+                            <item4
+                                jcr:primaryType="nt:unstructured"
+                                label="OneNote"
+                                link="https://www.microsoft.com/en-in/"/>
+                            <item5
+                                jcr:primaryType="nt:unstructured"
+                                label="Windows"
+                                link="https://www.microsoft.com/en-in/"/>
+                            <item6
+                                jcr:primaryType="nt:unstructured"
+                                label="MicrosoftEdge"
+                                link="https://www.microsoft.com/en-in/"/>
+                            <item7
+                                jcr:primaryType="nt:unstructured"
+                                label="More..."
+                                link="https://www.microsoft.com/en-in/"/>
+                        </dropdownItems>
+                    </item2>
+                    <item3
+                        jcr:primaryType="nt:unstructured"
+                        title="Devices"
+                        url="https://www.microsoft.com/en-in/">
+                        <dropdownItems jcr:primaryType="nt:unstructured">
+                            <item0
+                                jcr:primaryType="nt:unstructured"
+                                label="Surface"
+                                link="https://www.microsoft.com/en-in/"/>
+                            <item1
+                                jcr:primaryType="nt:unstructured"
+                                label="Pc Accessories"
+                                link="https://www.microsoft.com/en-in/"/>
+                            <item2
+                                jcr:primaryType="nt:unstructured"
+                                label="Xbox"
+                                link="https://www.microsoft.com/en-in/"/>
+                            <item3
+                                jcr:primaryType="nt:unstructured"
+                                label="PC Gaming"
+                                link="https://www.microsoft.com/en-in/"/>
+                            <item4
+                                jcr:primaryType="nt:unstructured"
+                                label="HoloLens"
+                                link="https://www.microsoft.com/en-in/"/>
+                            <item5
+                                jcr:primaryType="nt:unstructured"
+                                label="Surface Hub"
+                                link="https://www.microsoft.com/en-in/"/>
+                            <item6
+                                jcr:primaryType="nt:unstructured"
+                                label="Hardware Warrenties"
+                                link="https://www.microsoft.com/en-in/"/>
+                        </dropdownItems>
+                    </item3>
+                    <item4
+                        jcr:primaryType="nt:unstructured"
+                        title="Account &amp; billing"
+                        url="https://www.microsoft.com/en-in/">
+                        <dropdownItems jcr:primaryType="nt:unstructured">
+                            <item0
+                                jcr:primaryType="nt:unstructured"
+                                label="Account"
+                                link="https://www.microsoft.com/en-in/"/>
+                            <item1
+                                jcr:primaryType="nt:unstructured"
+                                label="Microsoft Store &amp; billing"
+                                link="https://www.microsoft.com/en-in/"/>
+                        </dropdownItems>
+                    </item4>
+                    <item5
+                        jcr:primaryType="nt:unstructured"
+                        title="Resources"
+                        url="https://www.microsoft.com/en-in/">
+                        <dropdownItems jcr:primaryType="nt:unstructured">
+                            <item0
+                                jcr:primaryType="nt:unstructured"
+                                label="What's New"
+                                link="https://www.microsoft.com/en-in/"/>
+                            <item1
+                                jcr:primaryType="nt:unstructured"
+                                label="Community Forums"
+                                link="https://www.microsoft.com/en-in/"/>
+                            <item2
+                                jcr:primaryType="nt:unstructured"
+                                label="Microsoft 365 Admins"
+                                link="https://www.microsoft.com/en-in/"/>
+                            <item3
+                                jcr:primaryType="nt:unstructured"
+                                label="Small Business Portal"
+                                link="https://www.microsoft.com/en-in/"/>
+                            <item4
+                                jcr:primaryType="nt:unstructured"
+                                label="Developer"
+                                link="https://www.microsoft.com/en-in/"/>
+                            <item5
+                                jcr:primaryType="nt:unstructured"
+                                label="Education"
+                                link="https://www.microsoft.com/en-in/"/>
+                            <item6
+                                jcr:primaryType="nt:unstructured"
+                                label="Report a support scam"
+                                link="https://www.microsoft.com/en-in/"/>
+                            <item7
+                                jcr:primaryType="nt:unstructured"
+                                label="Product safety"
+                                link="https://www.microsoft.com/en-in/"/>
+                        </dropdownItems>
+                    </item5>
+                </navItems>
+            </header>
+        </root>
+    </jcr:content>
+</jcr:root>

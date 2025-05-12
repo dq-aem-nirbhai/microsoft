@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2025-05-08T12:53:49.118+05:30"
+        cq:lastModifiedBy="admin"
+        cq:tags="[experience-fragments:variation/web]"
+        cq:template="/conf/microsoft/settings/wcm/templates/xf-web-variation"
+        cq:xfMasterVariation="{Boolean}true"
+        cq:xfVariantType="web"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="homepageHeader"
+        sling:resourceType="microsoft/components/xfpage">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="microsoft/components/container"
+            layout="responsiveGrid">
+            <homepageheader
+                jcr:created="{Date}2025-04-30T11:31:00.298+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2025-05-08T08:59:54.274+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="microsoft/components/homepageheader"
+                allMicrosoftLink="https://www.microsoft.com/en-in"
+                allMicrosoftLinkText="All Microsoft"
+                carticon="/content/dam/we-retail/en/features/cart.png"
+                cartlink="https://www.microsoft.com/en-in"
+                carttitle="Cart"
+                fileReference="/content/dam/microsoft/images/microsoftImage.png"
+                link="https://www.microsoft.com/en-in"
+                searchicon="/content/dam/microsoft/images/search.png"
+                searchlink="https://www.microsoft.com/en-in"
+                searchtitle="Search"
+                signinicon="/content/dam/microsoft/images/user.png"
+                signinlink="https://www.microsoft.com/en-in"
+                signintitle="Signin">
+                <allmicro
+                    jcr:lastModified="{Date}2025-05-08T12:53:49.102+05:30"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="microsoft/components/allmicrosoft"
+                    singleExpansion="false"
+                    sitemap="Sitemap >"
+                    sitemaplink="https://www.microsoft.com/en-in">
+                    <items jcr:primaryType="nt:unstructured">
+                        <item0
+                            jcr:primaryType="nt:unstructured"
+                            title="Software">
+                            <listoflinks1 jcr:primaryType="nt:unstructured">
+                                <item0
+                                    jcr:primaryType="nt:unstructured"
+                                    link="https://www.microsoft.com/en-in/microsoft-365/products-apps-services"
+                                    text="Windows apps"/>
+                                <item1
+                                    jcr:primaryType="nt:unstructured"
+                                    link="https://www.microsoft.com/en-in/microsoft-365/products-apps-services"
+                                    text="AI"/>
+                                <item2
+                                    jcr:primaryType="nt:unstructured"
+                                    link="https://www.microsoft.com/en-in/microsoft-365/products-apps-services"
+                                    text="OneDrive"/>
+                                <item3
+                                    jcr:primaryType="nt:unstructured"
+                                    link="https://www.microsoft.com/en-in/microsoft-365/products-apps-services"
+                                    text="Outlook"/>
+                                <item4
+                                    jcr:primaryType="nt:unstructured"
+                                    link="https://www.microsoft.com/en-in/microsoft-365/products-apps-services"
+                                    text="OneNote"/>
+                                <item5
+                                    jcr:primaryType="nt:unstructured"
+                                    link="https://www.microsoft.com/en-in/microsoft-365/products-apps-services"
+                                    text="Skype"/>
+                                <item6
+                                    jcr:primaryType="nt:unstructured"
+                                    link="https://www.microsoft.com/en-in/microsoft-365/products-apps-services"
+                                    text="Microsoft Teams"/>
+                            </listoflinks1>
+                        </item0>
+                        <item1
+                            jcr:primaryType="nt:unstructured"
+                            title="PCs &amp; Devices">
+                            <listoflinks1 jcr:primaryType="nt:unstructured">
+                                <item0
+                                    jcr:primaryType="nt:unstructured"
+                                    link="https://www.microsoft.com/en-in/microsoft-365/products-apps-services"
+                                    text="Shop Xbox"/>
+                                <item1
+                                    jcr:primaryType="nt:unstructured"
+                                    link="https://www.microsoft.com/en-in/microsoft-365/products-apps-services"
+                                    text="Accessories"/>
+                            </listoflinks1>
+                        </item1>
+                        <item2
+                            jcr:primaryType="nt:unstructured"
+                            title="Entertainment">
+                            <listoflinks1 jcr:primaryType="nt:unstructured">
+                                <item0
+                                    jcr:primaryType="nt:unstructured"
+                                    link="https://www.microsoft.com/en-in/microsoft-365/products-apps-services"
+                                    text="Xbox Games Pass Ultimate"/>
+                                <item1
+                                    jcr:primaryType="nt:unstructured"
+                                    link="https://www.microsoft.com/en-in/microsoft-365/products-apps-services"
+                                    text="Xbox games"/>
+                                <item2
+                                    jcr:primaryType="nt:unstructured"
+                                    link="https://www.microsoft.com/en-in/microsoft-365/products-apps-services"
+                                    text="Pc games"/>
+                                <item3
+                                    jcr:primaryType="nt:unstructured"
+                                    link="https://www.microsoft.com/en-in/microsoft-365/products-apps-services"
+                                    text="Window Digital games"/>
+                            </listoflinks1>
+                        </item2>
+                        <item3
+                            jcr:primaryType="nt:unstructured"
+                            title="Business">
+                            <listoflinks1 jcr:primaryType="nt:unstructured">
+                                <item0
+                                    jcr:primaryType="nt:unstructured"
+                                    link="https://www.microsoft.com/en-in/microsoft-365/products-apps-services"
+                                    text="Microsoft Cloud"/>
+                                <item1
+                                    jcr:primaryType="nt:unstructured"
+                                    link="https://www.microsoft.com/en-in/microsoft-365/products-apps-services"
+                                    text="Microsoft Security"/>
+                                <item2
+                                    jcr:primaryType="nt:unstructured"
+                                    link="https://www.microsoft.com/en-in/microsoft-365/products-apps-services"
+                                    text="Azure"/>
+                                <item3
+                                    jcr:primaryType="nt:unstructured"
+                                    link="https://www.microsoft.com/en-in/microsoft-365/products-apps-services"
+                                    text="Dynamics 365"/>
+                                <item4
+                                    jcr:primaryType="nt:unstructured"
+                                    link="https://www.microsoft.com/en-in/microsoft-365/products-apps-services"
+                                    text="Microsoft 365 for Business"/>
+                                <item5
+                                    jcr:primaryType="nt:unstructured"
+                                    link="https://www.microsoft.com/en-in/microsoft-365/products-apps-services"
+                                    text="Microsoft Industry"/>
+                                <item6
+                                    jcr:primaryType="nt:unstructured"
+                                    link="https://www.microsoft.com/en-in/microsoft-365/products-apps-services"
+                                    text="Microsoft Power Platform"/>
+                                <item7
+                                    jcr:primaryType="nt:unstructured"
+                                    link="https://www.microsoft.com/en-in/microsoft-365/products-apps-services"
+                                    text="Windows 365"/>
+                            </listoflinks1>
+                        </item3>
+                        <item4
+                            jcr:primaryType="nt:unstructured"
+                            title="Developer &amp; IT">
+                            <listoflinks1 jcr:primaryType="nt:unstructured">
+                                <item0
+                                    jcr:primaryType="nt:unstructured"
+                                    link="https://www.microsoft.com/en-in/microsoft-365/products-apps-services"
+                                    text="Microsoft Developer"/>
+                                <item1
+                                    jcr:primaryType="nt:unstructured"
+                                    link="https://www.microsoft.com/en-in/microsoft-365/products-apps-services"
+                                    text="Microsoft Learn"/>
+                                <item2
+                                    jcr:primaryType="nt:unstructured"
+                                    link="https://www.microsoft.com/en-in/microsoft-365/products-apps-services"
+                                    text="Support for al marketplace apps"/>
+                                <item3
+                                    jcr:primaryType="nt:unstructured"
+                                    link="https://www.microsoft.com/en-in/microsoft-365/products-apps-services"
+                                    text="Microsoft tech community"/>
+                                <item4
+                                    jcr:primaryType="nt:unstructured"
+                                    link="https://www.microsoft.com/en-in/microsoft-365/products-apps-services"
+                                    text="Azure Marketplace"/>
+                                <item5
+                                    jcr:primaryType="nt:unstructured"
+                                    link="https://www.microsoft.com/en-in/microsoft-365/products-apps-services"
+                                    text="AppSource"/>
+                                <item6
+                                    jcr:primaryType="nt:unstructured"
+                                    link="https://www.microsoft.com/en-in/microsoft-365/products-apps-services"
+                                    text="VisualStudio"/>
+                            </listoflinks1>
+                        </item4>
+                        <item5
+                            jcr:primaryType="nt:unstructured"
+                            title="Other">
+                            <listoflinks1 jcr:primaryType="nt:unstructured">
+                                <item0
+                                    jcr:primaryType="nt:unstructured"
+                                    link="https://www.microsoft.com/en-in/microsoft-365/products-apps-services"
+                                    text="Free Downloads &amp; Security"/>
+                                <item1
+                                    jcr:primaryType="nt:unstructured"
+                                    link="https://www.microsoft.com/en-in/microsoft-365/products-apps-services"
+                                    text="Education"/>
+                                <item2
+                                    jcr:primaryType="nt:unstructured"
+                                    link="https://www.microsoft.com/en-in/microsoft-365/products-apps-services"
+                                    text="Gift Cards"/>
+                                <item3
+                                    jcr:primaryType="nt:unstructured"
+                                    link="https://www.microsoft.com/en-in/microsoft-365/products-apps-services"
+                                    text="Licensing"/>
+                            </listoflinks1>
+                        </item5>
+                    </items>
+                </allmicro>
+                <navItems jcr:primaryType="nt:unstructured">
+                    <item0
+                        jcr:primaryType="nt:unstructured"
+                        title="Microsoft 365"
+                        url="https://www.microsoft.com/en-in"/>
+                    <item1
+                        jcr:primaryType="nt:unstructured"
+                        title="Teams"
+                        url="https://www.microsoft.com/en-in"/>
+                    <item2
+                        jcr:primaryType="nt:unstructured"
+                        title="Copilot"
+                        url="https://www.microsoft.com/en-in"/>
+                    <item3
+                        jcr:primaryType="nt:unstructured"
+                        title="Windows"
+                        url="https://www.microsoft.com/en-in"/>
+                    <item4
+                        jcr:primaryType="nt:unstructured"
+                        title="Surface"
+                        url="https://www.microsoft.com/en-in"/>
+                    <item5
+                        jcr:primaryType="nt:unstructured"
+                        title="Xbox"
+                        url="https://www.microsoft.com/en-in"/>
+                    <item6
+                        jcr:primaryType="nt:unstructured"
+                        title="Support"
+                        url="https://www.microsoft.com/en-in"/>
+                </navItems>
+            </homepageheader>
+        </root>
+    </jcr:content>
+</jcr:root>

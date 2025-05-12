@@ -1,0 +1,17 @@
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+     data-sly-call="${clientlib.css @ categories='microsoft.serviceb'}"/>
+
+<div class="service-container" data-sly-use.model="com.aem.trg.microsoft.core.models.ServiceBelow">
+    <div class="service-list" data-sly-list.item="${model.links}">
+        <div class="service-item">
+            <div class="service-content">
+                <h3 class="service-title">${item.subtitle}</h3>
+                <ul class="service-links" data-sly-list.link="${item.linkList}">
+                    <li>
+                        <a href="${link.linkPath}">${link.label}</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

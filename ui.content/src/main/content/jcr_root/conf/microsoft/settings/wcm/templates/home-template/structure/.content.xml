@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:deviceGroups="[mobile/groups/responsive]"
+        cq:lastModified="{Date}2025-05-12T13:57:22.587+05:30"
+        cq:lastModifiedBy="admin"
+        cq:template="/conf/microsoft/settings/wcm/templates/home-template"
+        jcr:primaryType="cq:PageContent"
+        sling:resourceType="microsoft/components/page">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="microsoft/components/container"
+            layout="responsiveGrid">
+            <experiencefragment
+                jcr:created="{Date}2025-05-12T13:56:19.758+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2025-05-12T13:57:22.578+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="microsoft/components/experiencefragment"
+                fragmentVariationPath="/content/experience-fragments/microsoft/us/en/site/warrantyheader/master"/>
+            <container
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="microsoft/components/container"
+                editable="{Boolean}true"
+                layout="responsiveGrid"/>
+            <experiencefragment_326627411
+                jcr:created="{Date}2025-05-12T13:40:37.854+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2025-05-12T13:49:20.802+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="microsoft/components/experiencefragment"
+                fragmentVariationPath="/content/experience-fragments/microsoft/us/en/site/all-footers/master"/>
+        </root>
+        <cq:responsive jcr:primaryType="nt:unstructured">
+            <breakpoints jcr:primaryType="nt:unstructured">
+                <phone
+                    jcr:primaryType="nt:unstructured"
+                    title="Smaller Screen"
+                    width="{Long}768"/>
+                <tablet
+                    jcr:primaryType="nt:unstructured"
+                    title="Tablet"
+                    width="{Long}1200"/>
+            </breakpoints>
+        </cq:responsive>
+    </jcr:content>
+</jcr:root>

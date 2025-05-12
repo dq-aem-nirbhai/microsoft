@@ -30,6 +30,37 @@
                             fieldLabel="Extra Text"
                             name="./extraText"/>
 
+                    <extratext
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                            fieldLabel="Card Description"
+                            name="./extraText"
+                            useFixedInlineToolbar="{Boolean}true">
+
+                        <rtePlugins jcr:primaryType="nt:unstructured">
+                            <format
+                                    jcr:primaryType="nt:unstructured"
+                                    features="bold,italic" />
+                            <links
+                                    jcr:primaryType="nt:unstructured"
+                                    features="modifylink,unlink" />
+                            <lists
+                                    jcr:primaryType="nt:unstructured"
+                                    features="*" />
+                            <paraformat
+                                    jcr:primaryType="nt:unstructured"
+                                    features="*" />
+                        </rtePlugins>
+
+                        <uiSettings jcr:primaryType="nt:unstructured">
+                            <cui jcr:primaryType="nt:unstructured">
+                                <inline
+                                        jcr:primaryType="nt:unstructured"
+                                        toolbar="[format#bold,format#italic,lists#unordered,lists#ordered,links#modifylink,links#unlink,paraformat]" />
+                            </cui>
+                        </uiSettings>
+                    </extratext>
+
                     <!-- Extra Link -->
                     <extraLink
                             jcr:primaryType="nt:unstructured"

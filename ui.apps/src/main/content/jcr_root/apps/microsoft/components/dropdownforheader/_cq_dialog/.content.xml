@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root
+        xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+        xmlns:cq="http://www.day.com/jcr/cq/1.0"
+        xmlns:jcr="http://www.jcp.org/jcr/1.0"
+        jcr:primaryType="nt:unstructured"
+        jcr:title="dropdownforheader"
+        sling:resourceType="cq/gui/components/authoring/dialog">
+
+    <content
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/coral/foundation/container">
+
+        <items jcr:primaryType="nt:unstructured">
+
+            <links
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                    fieldLabel=" Links"
+                    composite="true"
+                    name="./links"> <!-- Must be on the multifield itself -->
+
+                <!-- Composite field structure -->
+                <field
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/fieldset"
+                        name="./links">
+                    <layout
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/layouts/fixedcolumns"/>
+
+                    <items jcr:primaryType="nt:unstructured">
+                        <text
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldLabel="Text"
+                                name="./text"/>
+
+                        <link
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                fieldLabel="Link"
+                                name="./link"/>
+                    </items>
+                </field>
+            </links>
+            <nestedMultifield
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                    fieldLabel="Links"
+                    composite="true"
+                    name="./items"> <!-- Must be on the multifield itself -->
+
+                <!-- Composite field structure -->
+                <field
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/fieldset"
+                        name="./items">
+                    <layout
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/layouts/fixedcolumns"/>
+
+                    <items jcr:primaryType="nt:unstructured">
+
+                        <!-- Main Title Field -->
+                        <mainTitle
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldLabel="Main Title"
+                                name="./title"/>
+
+                        <!-- Footer Links Multifield -->
+                        <footerLinksField
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                fieldLabel="Footer Links"
+                                composite="true"
+                                name="./listoflinks1"> <!-- Must be on the multifield itself -->
+
+                            <!-- Composite field structure -->
+                            <field
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/fieldset"
+                                    name="./listoflinks1">
+                                <layout
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/layouts/fixedcolumns"/>
+
+                                <items jcr:primaryType="nt:unstructured">
+                                    <text
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="Text"
+                                            name="./text"/>
+
+                                    <link
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                            fieldLabel="Link"
+                                            name="./link"/>
+                                </items>
+                            </field>
+                        </footerLinksField>
+                    </items></field>
+            </nestedMultifield>
+            <text
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                    fieldLabel="sitemap"
+                    name="./sitemap"/>
+
+            <link
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                    fieldLabel="sitemaplink"
+                    name="./sitemaplink"/>
+        </items>
+    </content>
+</jcr:root>
+

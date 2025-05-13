@@ -19,6 +19,9 @@ import java.util.List;
 public class MicrosoftHeaderModel {
 
     @ValueMapValue
+    private String fileReference;
+
+    @ValueMapValue
     private String brandText;
     @ValueMapValue
     private String link1;
@@ -55,25 +58,31 @@ public class MicrosoftHeaderModel {
     @ValueMapValue
     private String signinlink;
 
-    public String getSearchReference() {
-        return searchReference;
+    @ValueMapValue
+    private String showButton;
+
+    public String getShowButton() {
+        return showButton;
+    }
+
+    public String getSearchicon() {
+        return searchicon;
     }
 
     @ValueMapValue
-    private String searchReference;
+    private String searchicon;
 
     public String getFileReference() {
         return fileReference;
     }
 
-    @ValueMapValue
-    private String fileReference;
+
 
     @ValueMapValue
-    private String iconReference;
+    private String signinicon;
 
-    public String getIconReference() {
-        return iconReference;
+    public String getSigninicon() {
+        return signinicon;
     }
 
     public String getTitle() {

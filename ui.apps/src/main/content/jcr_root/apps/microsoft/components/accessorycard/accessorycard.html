@@ -1,20 +1,29 @@
-<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
-     data-sly-call="${clientlib.css @ categories='microsoft.accessorycard'}"/>
+<sly data-sly-use.clientlib="core/wcm/components/commons/v1/templates/clientlib.html">
+    <sly data-sly-call="${clientlib.all @ categories='microsoft.warrantycard'}" />
+</sly>
 
-<sly data-sly-use.model="com.aem.trg.microsoft.core.models.AccessoryCard"/>
 
-<div class="container">
+<sly data-sly-use.accessoryCard="com.aem.trg.microsoft.core.models.AccessoryCard" />
 
-    <!-- Image -->
-    <img class="img" src="${model.fileReference}"/>
+<div class="accessory-card-component">
+    <p class="w-Main-Title">${accessoryCard.title}</p>
 
-    <!-- Title / Description -->
-    <p class="ocpLegacyBold">${model.text1}</p>
-    <p class="ocpLegacyBold1">${model.text2}</p>
-
-    <!-- Link Button -->
-    <a href="${model.link}" class="link-uppercase" data-sly-test="${model.link}">
-        ${model.linkTitle}
-    </a>
-
+    <div class="accessory-card-list">
+        <sly data-sly-list.item="${accessoryCard.links}">
+            <div class="accessory-card">
+                <div class="accessory-card__image">
+                    <img src="${item.fileReference}" alt="${item.title @ context='html'}"/>
+                </div>
+                <div class="accessory-card__content">
+                    <h3 class="accessory-card__title">${item.title @ context='html'}</h3>
+                    <p style="color:black" class="accessory-card__description">${item.description @ context='html'}</p>
+                    <div class="accessory-card__buttons">
+                        <a href="${item.buttonlink}" class="accessory-card__button">${item.buttontext @ context='html'}</a>
+                        <a href="${item.buttonlink1}" class="accessory-card__button">${item.buttontext1 @ context='html'}</a>
+                    </div>
+                </div>
+            </div>
+        </sly>
+    </div>
 </div>
+

@@ -1,3 +1,9 @@
+    .w-Main-Title{
+    font-size:35px;
+    font-weight:bold;
+    text-align:center;
+    }
+
     .accessory-card-component {
         padding: 2rem;
         background-color:#F2F2F2;

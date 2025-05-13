@@ -11,6 +11,13 @@ import java.util.List;
 
 @Model(adaptables = Resource.class,defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL)
 public class AccessoryCard {
+    public String getTitle() {
+        return title;
+    }
+
+    @ValueMapValue
+    private String title;
+
 
     @ChildResource
     private List<OfficeItem> links; // this will map the multifield

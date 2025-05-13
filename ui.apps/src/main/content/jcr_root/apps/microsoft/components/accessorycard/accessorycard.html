@@ -6,6 +6,7 @@
 <sly data-sly-use.accessoryCard="com.aem.trg.microsoft.core.models.AccessoryCard" />
 
 <div class="accessory-card-component">
+    <p class="w-Main-Title">${accessoryCard.title}</p>
 
     <div class="accessory-card-list">
         <sly data-sly-list.item="${accessoryCard.links}">

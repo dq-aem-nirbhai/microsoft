@@ -4,23 +4,22 @@
 />
 <sly data-sly-use.appsandservice="com.aem.trg.microsoft.core.models.AppsandService" />
 
-<div class="image-component">
-    <div class="image-container">
-        <img src="${appsandservice.fileReference}" class="background-image" alt="Background Image" />
+<div class="apps-service-component">
+    <div class="apps-service-image-wrapper">
+        <img src="${appsandservice.fileReference}" class="apps-service-image" alt="Apps and Service Image" />
 
-        <div class="overlay">
-            <div class="overlay-content">
-                <h2 class="title">${appsandservice.title}</h2>
+        <div class="apps-service-overlay">
+            <div class="apps-service-content">
+                <h2 class="apps-service-title">${appsandservice.title}</h2>
 
-                <p class="text" data-sly-test="${appsandservice.text}" data-sly-unwrap>
+                <p class="apps-service-description" data-sly-test="${appsandservice.text}" data-sly-unwrap>
                     ${appsandservice.text @ context='html'}
                 </p>
 
-                <div class="button-grid" data-sly-list.button="${appsandservice.buttons}">
-                    <a class="button" href="${button.link}">${button.text}</a>
+                <div class="apps-service-buttons" data-sly-list.button="${appsandservice.buttons}">
+                    <a class="apps-service-button" href="${button.link}">${button.text}</a>
                 </div>
             </div>
         </div>
     </div>
 </div>
-

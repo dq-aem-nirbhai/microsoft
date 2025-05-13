@@ -1,0 +1,36 @@
+<sly data-sly-use.clientlib="core/wcm/components/commons/v1/templates/clientlib.html">
+    <sly data-sly-call="${clientlib.css @ categories='microsoft.allmicrosoft'}" />
+</sly>
+
+<div class="allmicrosoft-container">
+    <div class="allmicrosoft-fragment">
+        <sly data-sly-use.model="com.aem.trg.microsoft.core.models.AllMicrosoft" />
+
+        <!-- Always render the list, even if empty -->
+        <ul class="allmicrosoft-links" data-sly-list.listoflink="${model.links}">
+            <li>
+                <a href="${listoflink.link}" class="allmicrosoft-link-text">${listoflink.text}</a>
+            </li>
+            <!-- Divider -->
+            <hr class="allmicrosoft-divider" />
+        </ul>
+
+        <!-- Nested multifield items -->
+        <ul data-sly-list.listofitem="${model.items}" class="allmicrosoft-one">
+            <li>
+                <p class="allmicrosoft-title">${listofitem.title}</p>
+                <ul class="allmicrosoft-link-list">
+                    <sly data-sly-list.link="${listofitem.listoflinks1}">
+                        <li class="allmicrosoft-link-item">
+                            <a href="${link.link}" class="allmicrosoft-link-text">${link.text}</a>
+                        </li>
+                    </sly>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="allmicrosoft-end">
+        <a href="${model.sitemaplink}">${model.sitemap}</a>
+    </div>
+</div>

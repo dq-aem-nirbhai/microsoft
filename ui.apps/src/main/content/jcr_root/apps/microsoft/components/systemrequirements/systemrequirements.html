@@ -1,0 +1,25 @@
+
+<sly data-sly-use.model="com.aem.trg.microsoft.core.models.SystemRequirement"/>
+<sly data-sly-use.clientlib="core/wcm/components/commons/v1/templates/clientlib.html">
+    <sly data-sly-call="${clientlib.css @ categories='microsoft.systemrequirement'}" />
+</sly>
+<div class="system-requirement-component">
+    <h1>${model.title}</h1>
+
+    <div class="item-container">
+        <sly data-sly-list.items="${model.listofitems}">
+            <div class="item">
+                <div class="item-inner">
+                    <div class="item-label">
+                        <img src="${items.fileReference}" alt="">
+                        <h4>${items.title}</h4>
+                    </div>
+                    <p>${items.text @ context='html'}</p>
+                </div>
+            </div>
+        </sly>
+    </div>
+
+    <a href="${model.link}" id="custom-link">${model.linkText}</a>
+
+</div>

@@ -1,15 +1,17 @@
 <header class="microsoft-header" data-sly-use.model="com.aem.trg.microsoft.core.models.MicrosoftHeaderModel">
+
     <sly data-sly-use.clientlib="core/wcm/components/commons/v1/templates/clientlib.html">
         <sly data-sly-call="${clientlib.css @ categories='microsoft.header'}" />
         <sly data-sly-call="${clientlib.js @ categories='microsoft.header'}" />
-    </sly>
-    <div class="brand">
-        <img src="/content/dam/microsoft/images/microsoftImage.png" alt="Brand Logo" class="brand-logo" />
-        <div class="vertical-divider"></div>
-        <a href="${model.link1}" class="brandtext">${model.brandText}</a>
 
-    </div>
+    </sly>
+
     <nav class="main-nav">
+        <div class="brand">
+            <img src="${model.fileReference}" alt="Brand Logo" class="brand-logo" />
+            <div class="vertical-divider"></div>
+            <a href="${model.link1}" class="brandtext">${model.brandText}</a>
+        </div>
         <ul data-sly-list.item="${model.navItems}">
             <li class="nav-item">
                 <a href="${item.url}" class="nav-link">${item.title}</a>
@@ -21,37 +23,119 @@
             </li>
         </ul>
 
-    </nav>
-    <div class="buybutton">
-        <a href="${model.buttonlink}" class="custom-button">${model.buttontext}</a>
+        <div class="buybutton" data-sly-test="${model.showButton}">
 
-    </div>
-    <div class="all-microsoft">
-        <div class="dropdown-container" onclick="toggleDropdown()">
-            <p class="dropdown-toggle">${model.allMicrosoftLinkText}</p>
-
+            <a href="${model.buttonlink}">${model.buttontext}</a>
         </div>
-    </div>
-
+    </nav>
 
     <div class="header-icons">
 
+        <div class="all-microsoft" id="toggle-allmicrosoft">
 
-        <a href="${model.searchlink}" class="search-link">${model.searchtext}</a>
-
-        <img src="/content/dam/microsoft/images/search.png"alt="Search Icon" title="Search" />
+            <div class="dropdown-container">
+                <a href="#"> ${model.allMicrosoftLinkText}</a>
+            </div>
+            <div id="allmicrosoft-component" class="abs">
+                <sly data-sly-resource="${'allmicro' @ resourceType='microsoft/components/dropdownforheader'}" />
+            </div>
+        </div>
+        <div class="search-wrapper">${model.searchtext}
+            <img src="${model.searchicon}" alt="Search Icon" class="search-icon" title="Search" />
+            <input type="text" class="search-box" placeholder="Search..." />
+            <button class="search-cancel" title="Cancel Search">Cancel</button>
+        </div>
         <a href="${model.signinlink}" class="signin-link">${model.signintext}</a>
-        <img src="/content/dam/microsoft/images/user.png" alt="Profile Icon" class="profile-icon" title="Account" />
+        <img src="${model.signinicon}" alt="Profile Icon" class="profile-icon" title="Account" />
     </div>
-
 </header>
+
 <script>
-    function toggleDropdown() {
-      const dropdown = document.getElementById('dropdownList');
-      dropdown.classList.toggle('show');
-    }
+    document.addEventListener("DOMContentLoaded", function () {
+        // --- Search Box ---
+        const searchIcon = document.querySelector(".search-icon");
+        const searchBox = document.querySelector(".search-box");
+        const cancelBtn = document.querySelector(".search-cancel");
+
+        if (searchIcon && searchBox && cancelBtn) {
+            searchIcon.addEventListener("click", function () {
+                searchBox.classList.add("expanded");
+                cancelBtn.classList.add("show");
+                searchBox.focus();
+            });
+
+            cancelBtn.addEventListener("click", function () {
+                searchBox.classList.remove("expanded");
+                cancelBtn.classList.remove("show");
+                searchBox.value = "";
+            });
+
+            document.addEventListener("click", function (e) {
+                const isClickInside = searchBox.contains(e.target) ||
+                    searchIcon.contains(e.target) ||
+                    cancelBtn.contains(e.target);
+
+                if (!isClickInside) {
+                    searchBox.classList.remove("expanded");
+                    cancelBtn.classList.remove("show");
+                }
+            });
+        }
+
+        // --- All Microsoft Dropdown ---
+        const toggleLink = document.querySelector("#toggle-allmicrosoft .dropdown-container a");
+        const allMicrosoftComponent = document.getElementById("allmicrosoft-component");
+
+        if (toggleLink && allMicrosoftComponent) {
+            allMicrosoftComponent.style.display = "none";
+
+            toggleLink.addEventListener("click", function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+                const currentDisplay = window.getComputedStyle(allMicrosoftComponent).display;
+                allMicrosoftComponent.style.display = (currentDisplay === "none") ? "block" : "none";
+            });
+
+            document.addEventListener("click", function (e) {
+                const isClickInsideToggle = toggleLink.contains(e.target);
+                const isClickInsideDropdown = allMicrosoftComponent.contains(e.target);
+
+                if (!isClickInsideToggle && !isClickInsideDropdown) {
+                    allMicrosoftComponent.style.display = "none";
+                }
+            });
+        }
+
+        // --- Nav Item Dropdown Toggle ---
+        const navItems = document.querySelectorAll(".nav-item");
+
+        navItems.forEach(item => {
+            const link = item.querySelector(".nav-link");
+            const dropdown = item.querySelector(".dropdown");
+
+            if (dropdown) {
+                link.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+
+                    // Remove 'active' from other nav-items
+                    navItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove("active");
+                        }
+                    });
+
+                    // Toggle current one
+                    item.classList.toggle("active");
+                });
+
+                // Close dropdown if clicked outside
+                document.addEventListener("click", function (e) {
+                    if (!item.contains(e.target)) {
+                        item.classList.remove("active");
+                    }
+                });
+            }
+        });
+    });
 </script>
-
-
-
-

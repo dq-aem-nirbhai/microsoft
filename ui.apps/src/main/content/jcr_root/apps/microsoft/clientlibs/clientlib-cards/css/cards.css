@@ -18,17 +18,14 @@
     border-radius: 0;
     box-shadow: 0 4px 8px rgba(0,0,0,0.05);
     overflow: hidden;
-    width: 300px;
-    transition: transform 0.2s ease-in-out;
+    width: 315px;
     text-align: left; /* Ensures content inside the card aligns left */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.cards:hover {
-    transform: translateY(-5px);
-}
+
 
 .cards img {
     display: block;

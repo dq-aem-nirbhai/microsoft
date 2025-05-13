@@ -1,0 +1,163 @@
+
+
+<div class="drop-container">
+    <div class="drop-fragment">
+        <sly data-sly-use.model="com.aem.trg.microsoft.core.models.HeaderDropDown" />
+
+
+        <ul class="drop-links" data-sly-list.listoflink="${model.links}">
+
+            <li>
+                <a href="${listoflink.link}" class="drop-link-text">${listoflink.text}</a>
+            </li>
+
+
+        </ul>
+        <hr class="drop-divider" />
+        <!-- Nested multifield items -->
+
+
+        <ul data-sly-list.listofitem="${model.items}" class="drop-one">
+            <li>
+                <p class="drop-title">${listofitem.title}</p>
+                <ul class="drop-link-list">
+                    <sly data-sly-list.link="${listofitem.listoflinks1}">
+                        <li class="drop-link-item">
+                            <a href="${link.link}" class="drop-link-text">${link.text}</a>
+                        </li>
+                    </sly>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="drop-end">
+        <a href="${model.sitemaplink}">${model.sitemap}</a>
+    </div>
+</div>
+<style>
+    .drop-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin-top: 10px;
+    width: 900px;
+}
+
+.drop-title {
+    font-size: 10px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #616161;
+}
+
+.drop-link-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+     font-size: 10px;
+    color: black;
+}
+
+.drop-link-item {
+    margin-bottom: 5px;
+}
+
+.drop-links li .drop-link-text {
+    text-decoration: none;
+    font-size: 10px;
+    color: black;
+}
+.drop-link-item a {
+    color: black;
+    font-size: 10px;
+    text-decoration: none;
+}
+
+
+.drop-link-text:hover {
+    text-decoration: underline;
+}
+
+.drop-container ul[data-sly-list] {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 0;
+}
+
+.drop-container ul[data-sly-list] > li {
+    list-style: none;
+}
+
+.drop-container .drop-one {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+}
+
+.drop-container .drop-one > li {
+    list-style: none;
+}
+
+.drop-container .drop-links {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+}
+
+.drop-container .drop-links > li {
+    list-style: none;
+}
+
+.drop-divider {
+    width: 100%;
+    border: none;
+    border-top: 1px solid rgb(211, 211, 211);
+    margin: 20px 0;
+}
+
+.drop-end {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 225px;
+    background-color: rgb(211, 211, 211);
+    height: 53px;
+    width: 1014px;
+    margin-left: -34px;
+    margin-bottom: 0px;
+    border-bottom: 2px solid black;
+    position: absolute;
+}
+
+user agent stylesheet
+
+
+.drop-end a {
+    font-size: 15px;
+    color: black;
+    text-decoration: none;
+}
+
+.drop-end a:hover {
+    text-decoration: underline;
+}
+
+.drop-container .drop-links:empty::before {
+    content: "";
+    display: block;
+    height: 10px;
+}
+    a:hover{
+    text-decoration: underline;
+    }
+</style>

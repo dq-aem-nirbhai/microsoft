@@ -15,17 +15,7 @@
             jcr:primaryType="nt:unstructured"
             sling:resourceType="granite/ui/components/coral/foundation/container">
         <items jcr:primaryType="nt:unstructured">
-            <tabs
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="granite/ui/components/coral/foundation/tabs"
-                    maximized="{Boolean}true">
-                <items jcr:primaryType="nt:unstructured">
-                    <asset
-                            jcr:primaryType="nt:unstructured"
-                            jcr:title="Asset"
-                            sling:resourceType="granite/ui/components/coral/foundation/container"
-                            margin="{Boolean}true">
-                        <items jcr:primaryType="nt:unstructured">
+
                             <columns
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
@@ -301,13 +291,6 @@
                                 </items>
                             </columns>
                         </items>
-                    </asset>
-                    <cq:styles
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="granite/ui/components/coral/foundation/include"
-                            path="/mnt/overlay/cq/gui/components/authoring/dialog/style/tab_edit/styletab"/>
-                </items>
-            </tabs>
-        </items>
+
     </content>
 </jcr:root>

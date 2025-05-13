@@ -1,3 +1,5 @@
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+     data-sly-call="${clientlib.css @ categories='microsoft.apps-service-component'}"/>
 <sly data-sly-use.model="com.aem.trg.microsoft.core.models.AppsServiceComponent" />
 
 <div class="apps-services">
@@ -6,82 +8,36 @@
         <p>${model.description}</p>
     </div>
 
-    <div class="apps-group">
-        <!-- Left Column -->
-        <div class="column">
-            <sly data-sly-list.group="${model.leftColumnGroups}">
-                <div class="text-group">
-                    <h3>${group.text}</h3>
-                    <ul>
-                        <sly data-sly-list.service="${group.services}">
-                            <li><a href="${service.link}">${service.label}</a></li>
-                        </sly>
-                    </ul>
-                </div>
-            </sly>
-        </div>
+    <!-- Combined grid container -->
+    <div class="apps-grid">
+        <!-- Left column groups -->
+        <sly data-sly-list.group="${model.leftColumnGroups}">
+            <div class="text-group">
+                <h3>${group.text}</h3>
+                <h3>${group.text1}</h3>
+                <ul>
+                    <sly data-sly-list.service="${group.services}">
+                        <li><a href="${service.link}">${service.label}</a></li>
+                    </sly>
+                </ul>
+            </div>
+        </sly>
 
-        <!-- Right Column -->
-        <div class="column">
-            <sly data-sly-list.group="${model.rightColumnGroups}">
-                <div class="text-group">
-                    <h3>${group.text}</h3>
-                    <ul>
-                        <sly data-sly-list.service="${group.services}">
-                            <li><a href="${service.link}">${service.label}</a></li>
-                        </sly>
-                    </ul>
-                </div>
-            </sly>
-        </div>
+        <!-- Right column groups -->
+        <sly data-sly-list.group="${model.rightColumnGroups}">
+            <div class="text-group">
+                <h3>${group.text}</h3>
+                <h3>${group.text1}</h3>
+                <ul>
+                    <sly data-sly-list.service="${group.services}">
+                        <li><a href="${service.link}">${service.label}</a></li>
+                    </sly>
+                </ul>
+            </div>
+        </sly>
     </div>
 </div>
 
-<style>
-    .apps-group {
-   display: flex;
-   justify-content: center;
-   gap: 60px;
-   max-width: 1200px;
-   margin: 0 auto;
-   text-align: left;
- }
-
- .column {
-   display: flex;
-   flex-direction: column;
-   gap: 40px;
- }
-
- .text-group h3 {
-   font-size: 1rem;
-   font-weight: 700;
-   color: #000;
-   margin-bottom: 8px;
- }
-
- .text-group ul {
-   list-style: none;
-   padding: 0;
-   margin: 0;
- }
-
- .text-group li {
-   margin: 6px 0;
- }
-
- .text-group a {
-   color: #0067b8;
-   text-decoration: none;
-   font-size: 0.95rem;
-   font-weight: 500;
-   word-break: break-word;
- }
-
- .text-group a:hover {
-   text-decoration: underline;
- }
 
 
 
-</style>

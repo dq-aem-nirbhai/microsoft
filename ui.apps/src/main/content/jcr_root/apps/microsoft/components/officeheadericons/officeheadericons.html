@@ -1,0 +1,84 @@
+<sly data-sly-use.model="com.aem.trg.microsoft.core.models.OfficeHeaderIcon" />
+
+<div class="office-header-section">
+
+    <div class="office-header-inner">
+        <h2 class="office-header-title">${model.title}</h2>
+
+        <div class="office-header-description" data-sly-test="${model.text}">
+            ${model.text @ context='html'}
+        </div>
+
+        <div class="office-header-icons" data-sly-list.item="${model.links}">
+            <div class="office-header-icon-card">
+                <a href="${item.iconLink}" class="office-header-icon-link">
+                    <img src="${item.fileReference}" class="office-header-icon-image" data-sly-test="${item.fileReference}" />
+                    <span class="office-header-icon-title">${item.iconTitle}</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+</div>
+<style>
+    .office-header-section {
+      padding: 60px 20px;
+      background-color: #f4f4f4;
+      text-align: center;
+    }
+
+    .office-header-title {
+      font-size: 36px;
+      font-weight: 600;
+      color: #000;
+      margin-bottom: 20px;
+    }
+
+    .office-header-description {
+      max-width: 800px;
+      margin: 0 auto 40px;
+      font-size: 18px;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .office-header-icons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+
+    .office-header-icon-card {
+      width: 160px;
+      text-align: center;
+    }
+
+    .office-header-icon-link {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .office-header-icon-image {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+      margin-bottom: 12px;
+    }
+
+    .office-header-icon-title {
+      font-size: 16px;
+      font-weight: 500;
+      color: #0067b8;
+      transition: color 0.3s;
+    }
+
+    .office-header-icon-link:hover .office-header-icon-title {
+      text-decoration: underline;
+      color: #004e8c;
+    }
+</style>

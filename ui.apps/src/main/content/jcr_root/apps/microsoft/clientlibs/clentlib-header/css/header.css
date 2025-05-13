@@ -2,18 +2,19 @@
     display: flex; /* Changed from inline-block */
     justify-content: space-between;
     align-items: center;
-    background-color: #f3f3f3;
+    background-color: tranparent;
     font-family: "Segoe UI", sans-serif;
     flex-wrap: wrap; /* You can set this to 'nowrap' if you never want it to wrap */
     padding: 10px 20px; /* Optional spacing */
+    margin:20px;
 }
  .brand {
         display: flex;
         align-items: center;
-        gap: 5px; /* Adds 5px spacing between children */
+  gap:0px;
     }
  .brand-logo {
-          height: 30px;
+          height: 24px;
           max-width: 100%;
           object-fit: contain;
           margin-right: 20px; /* space between image and divider */
@@ -26,56 +27,73 @@
        font-weight: bold;
 }
 .brandtext {
-    font-size: 30px;
-    font-weight: bold;
-    color: #000;
+    font-size: 16px;
+    font-family: "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+    color: #262626;
     text-decoration: none;
     position: relative;
     display: inline-block;
-   margin-left:10px;
+   margin:-3px 10px 0px;
+}
+.brandtext:focus {
+  outline: 2px dotted black;
+  outline-offset: 3px;
 }
 
-.brandtext::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -2px; /* Distance from the text */
-    width: 0%;
-    height: 2px; /* Line thickness */
-    background-color: #000;
-    transition: width 0.3s ease;
-}
+
+
 
 .brandtext:hover::after {
     width: 100%;
 }
 .nav-link {
+    font-size: 13px;
+
     position: relative;
     text-decoration: none;
     color: #000;
     font-weight: 500;
-    padding: 8px 12px;
+     padding: 8px 8px;
+
     display: inline-block;
     cursor: pointer;
 }
+.nav-link:focus {
+  outline: 2px dotted black;
+  outline-offset: 3px;
+}
+.nav-link:hover {
+              text-decoration: underline;
 
-.nav-link::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -2px;
-    width: 0%;
-    height: 2px;
-    background-color: #000;
-    transition: width 0.3s ease;
 }
 
 .nav-link:hover::after {
     width: 100%;
 }
+
+.nav-actions-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 30px; /* space between nav and All Microsoft */
+}
+
+.all-microsoft-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.main-nav{
+    margin-right: 140px;
+    display: flex;
+
+    align-items: center;
+ }
   .main-nav ul {
             display: flex;
-            gap: 10px;
+            gap: 5px;
             margin: 0;
             padding: 0;
             list-style: none;
@@ -118,11 +136,12 @@
         }
 
         .all-microsoft a {
-            color: #0078d7;
+            color: #000;
             text-decoration: none;
             font-weight: 300;
             padding: 8px 12px;
             font-size:16px;
+
         }
 
         .header-icons {
@@ -143,12 +162,39 @@
             border-radius: 50%;
             object-fit: cover;
         }
-        .buybutton button a{
-        margin-left:30px;
+
+
+
+        .buybutton{
+        height:30px;
+        width:150px;
+        border:2px solid black;
+        background-color: #ffffff;
+        border-radius:5px;
+        text-decoration: none;
+        margin-left:13px;
+        text-align:center;
         }
-.main-nav, .buybutton, .all-microsoft {
-    white-space: nowrap;
+
+
+        .buybutton a{
+
+        color:black;
+       text-decoration: none;
+
+         text-align:center;
+          border-radius: 4px;
+
+          cursor: pointer;
+        }
+a{
+ text-decoration: none;
 }
+
+   a:hover{
+          text-decoration: underline;
+        }
+
 /* hide by default */
 
 
@@ -162,27 +208,16 @@ display:none;
   list-style: none;
   padding: 10px;
   margin: 0;
-  background: #f9f9f9;
+  background: #ffffff;
   border: 1px solid #ccc;
   position: absolute;
   z-index: 1000;
   display:none;
 }
-.custom-button {
-    display: inline-block;
-    background-color: lightgray;
-    color: black;
-    padding: 8px 16px;
-    text-decoration: none;
-    border-radius: 4px;
-    margin-left: 2px;
-    cursor: pointer;
-
+.dropdown-list  .dropdown li a:hover{
+  background: #f2f2f2;
 }
 
-.custom-button:hover {
-    text-decoration: underline;
-}
 .search-link {
     color: black;
     text-decoration: none;
@@ -191,7 +226,90 @@ display:none;
 .search-link:hover {
     text-decoration: underline;
 }
+.search-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-box {
+    width: 0;
+    padding: 6px 10px;
+    opacity: 0;
+    transition: width 0.4s ease, opacity 0.4s ease;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    position: absolute;
+    right: 24px;
+    z-index: 999;
+    background: white;
+    pointer-events: none;
+}
+
+.search-box.expanded {
+    width: 1099px;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.search-icon {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.search-cancel {
+height:40px;
+width:130px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    position: absolute;
+  left: 50px;
+    z-index: 1000;
+    display: none;
+    background:gray;
+}
+
+.search-cancel.show {
+    display: block;
+}
+
 .signin-link {
     color: black;
     text-decoration: none;
 }
+.all-microsoft .dropdown-container a{
+     text-decoration: none;
+      margin-left: 0px;
+    }
+
+/* microsoft.header.css */
+
+
+#allmicrosoft-component {
+    display: none;
+    position: absolute;
+    top: 60px;
+    bottom:0px;
+    right: 150px; /* adjust based on where you want it to appear */
+       box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    padding: 10px;
+    z-index: 1000;
+      overflow-y: auto;
+                 text-decoration: none;
+
+}
+
+.all-microsoft-link a {
+    color: black;
+    text-decoration: none;
+    font-size: 13px;
+            text-decoration: none;
+
+}
+.abs{
+    height:300px;
+
+    }
+

@@ -44,3 +44,7 @@
     .sticky-nav-container .nav-link:hover {
         opacity: 0.85;
     }
+    .listOfcomponents{
+            list-style: none;
+
+    }

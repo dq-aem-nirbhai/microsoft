@@ -1,0 +1,35 @@
+<sly data-sly-use.model="com.aem.trg.microsoft.core.models.QuoteCarouselModel" />
+
+<sly data-sly-use.clientlib="core/wcm/components/commons/v1/templates/clientlib.html">
+    <sly data-sly-call="${clientlib.css @ categories='microsoft.diversitycaurosel'}" />
+    <sly data-sly-call="${clientlib.js  @ categories='microsoft.diversitycaurosel'}" />
+</sly>
+
+<div class="custom-carousel-diversity" role="region" aria-label="Quote Carousel">
+    <div class="carousel-inner-diversity">
+        <div data-sly-list.item="${model.quoteItems}">
+            <div class="carousel-item-diversity${itemList.index == 0 ? ' active' : ''}">
+                <blockquote>
+                    “${item.quoteText @ context='html'}”
+                    <div class="horizontal-divider-diversity"></div>
+                    <footer>${item.author}, ${item.designation}</footer>
+
+                </blockquote >
+
+            </div>
+        </div>
+    </div>
+<div class="buttons-c-diversity">
+    <button class="carousel-control-diversity prev" aria-label="Previous Slide">‹</button>
+    <button class="carousel-control-diversity next" aria-label="Next Slide">›</button>
+</div>
+    <div class="carousel-indicators-diversity">
+        <span data-sly-list.item="${model.quoteItems}">
+            <span class="indicator${itemList.index == 0 ? ' active' : ''}"
+                  aria-label="Slide ${itemList.index}">
+            </span>
+        </span>
+    </div>
+</div>
+
+

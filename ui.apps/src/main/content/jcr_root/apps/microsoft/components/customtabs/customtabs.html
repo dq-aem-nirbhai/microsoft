@@ -3,9 +3,6 @@
     <sly data-sly-call="${clientlib.js @ categories='microsoft.customtab'}" />
 </sly>
 
-
-
-
 <div class="sticky-nav-container">
     <ul class="nav">
         <sly data-sly-use.navModel="com.aem.trg.microsoft.core.models.CustomTab">
@@ -22,7 +19,7 @@
 
 
 <sly data-sly-list.card="${navModel.tabs}">
-    <li id="${card.id}">
+    <li id="${card.id}" class="listOfcomponents">
         <div data-sly-resource="${card.resourceType @ resourceType=card.resourceType}"></div>
     </li>
 </sly>

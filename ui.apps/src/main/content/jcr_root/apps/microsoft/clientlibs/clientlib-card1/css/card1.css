@@ -5,11 +5,12 @@
 }
 
 .card1-component h2 {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 1.5rem;
+
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 2rem;
     color: #1a1a1a;
-    padding-left: 70px;
+    padding-right: 100px;
 }
 
 .card1-container {
@@ -17,35 +18,30 @@
     flex-wrap: wrap;
     gap: 1.5rem;
     justify-content: center;
-    margin-right: 30px;
 }
 
 .card1 {
     background-color: #ffffff;
     border: 1px solid #e1e1e1;
-    border-radius: 0; /* sharp edges */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
     overflow: hidden;
-    width: 300px;
-    transition: transform 0.2s ease-in-out;
-}
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
 
-.card1:hover {
-    transform: translateY(-5px);
 }
 
 .card1 img {
-    display: block;
     width: 100%;
     height: auto;
     object-fit: cover;
-    border-radius: 0;
     cursor: pointer;
 }
 
 .card1-badge {
-    margin: 10px 10px 50px 20px;
-    position: absolute;
+
     top: 0;
     left: 0;
     background-color: #ffd400;
@@ -56,49 +52,53 @@
     text-transform: uppercase;
     border-radius: 0;
     pointer-events: none;
+    margin: 10px;
+    margin-left:-190px;
+    margin-bottom:-15px;
 }
 
 .card1-content {
-    padding: 16px;
-    text-align: left;
-    position: relative;
-    padding: 1rem;
+    padding: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
 }
 
 .card1-content h3 {
-    font-size: 1.9rem;
+    font-size: 1.3rem;
     font-weight: 600;
-    margin-bottom: 0.5rem;
-    color: #333;
+    margin-bottom: -1.5rem;
+    color: #1a1a1a;
     cursor: pointer;
 }
 
 .card1-content p {
     font-size: 1rem;
-    color: black;
-    margin-bottom: 1rem;
+    color: #1a1a1a;
+    flex-grow: 1;
+    margin-bottom: 0rem;
     cursor: pointer;
 }
 
 .card1-buttons {
-    margin-top: -10px; /* Moves the button up */
+    margin-top: auto;
     display: flex;
-    gap: 5px;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 
 .card1-buttons a {
     display: inline-block;
-    padding: 0.5rem 1rem;
+    padding: 0.6rem 1rem;
     background-color: #0067b8;
-    color: white;
+    color: #fff;
     border-radius: 2px;
     text-decoration: none;
-    font-weight: 500;
-    transition: background-color 0.3s ease;
-    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-top:-8px;
 }
 
 .card1-buttons a:hover {
-    background-color: #004f94;
+    background-color: #005a9e;
 }

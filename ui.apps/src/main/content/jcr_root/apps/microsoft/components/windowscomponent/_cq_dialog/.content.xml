@@ -24,6 +24,12 @@
                 <items jcr:primaryType="nt:unstructured">
 
                     <!-- Extra Text -->
+                    <extraText
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            fieldLabel="Extra Text"
+                            name="./extraText"/>
+
                     <extratext
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="cq/gui/components/authoring/dialog/richtext"

@@ -21,7 +21,7 @@ public class WindowCards {
     }
 
     @ChildResource
-    private List<OfficeItem> links; // this will map the multifield
+    private List<OfficeItem> links;
 
     public List<OfficeItem> getLinks() {
         return links;

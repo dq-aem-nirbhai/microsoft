@@ -27,6 +27,7 @@
 }
 
 /* Individual card */
+
 .windowcards {
   background-color: black;
   overflow: hidden;
@@ -44,6 +45,7 @@
 }
 
 /* Card image */
+
 .windowcards img {
   width:100%;
   height:auto;
@@ -53,6 +55,7 @@
 }
 
 /* Content inside card */
+
 .windowcards-content {
   padding: 1rem;
   display: flex;
@@ -77,7 +80,8 @@
 }
 
 .windowcards-content p a {
-  color: #3aa0fa;
+  color: #3aa0fa !important;
+  text-decoration: underline;
   font-size: inherit;
   line-height: inherit;
   vertical-align: baseline;

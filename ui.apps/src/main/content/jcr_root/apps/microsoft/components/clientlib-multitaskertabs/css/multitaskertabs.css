@@ -1,0 +1,139 @@
+.multitaskertabs-component {
+  text-align: center;
+  padding: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #ffffff;
+}
+
+/* Main title (h2) */
+.multitaskertabs-component h1 {
+  font-size: 3.5rem;
+  font-weight: 500;
+  background: linear-gradient(to right, #000101 0%, #161616 23%, #1265A5 83.38%);
+  margin-bottom: 0.5rem;
+  line-height: 80px;
+  padding-top: 20px;
+}
+
+
+.multitaskertabs-component h1 {
+ /* font-size: 3.5rem;
+  font-weight: 500;
+  background: linear-gradient(to right, #000101 0%, #161616 23%, #1265A5 83.38%);
+  color:transparent;
+  background-clip: text;
+  margin-bottom: 0.5rem;
+  line-height: 80px;
+  padding-top: 20px;
+}
+
+/* Subtitle (h4), centered and in 2 lines */
+
+
+background: linear-gradient(to right, #000101 0%, #161616 23%, #1265A5 83.38%);
+	font-size:3.5rem;
+    font-weight:500;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 0.5rem;
+  line-height: 80px;
+  padding-top: 20px;
+}
+
+
+/* Subtitle (h4), centered and in 2 lines */
+.multitaskertabs-component h4 {
+  font-size: 18px;
+  font-weight: 300;
+  color: #000;
+  max-width: 1200px;
+  margin: 0 auto 2rem;
+  line-height: 24px;
+  white-space: normal;
+  word-break: break-word;
+  padding-right: 20px;
+  letter-spacing: 0em;
+}
+
+/* Tabs wrapper */
+.microsoft_tab {
+  padding-left: 100px;
+  display: flex;
+  justify-content: space-around;
+  gap: 3rem;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 0.5rem;
+}
+
+/* Tab buttons */
+.microsoft_tab button {
+  background: none;
+  border: 2px dashed border;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #777777;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: color 0.3s ease, border 0.3s ease;
+  white-space: normal;
+  line-height: 1.4;
+  border-radius: 4px;
+  position: relative;
+}
+
+/* Hover effect */
+.microsoft_tab button:hover {
+  color: #000000;
+}
+
+/* Active tab style */
+.microsoft_tab button.active {
+  color: #000000;
+  border: 2px dashed #000000;
+}
+
+/* Blue underline */
+.microsoft_tab button.active::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #0078d4;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .microsoft_tab {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .microsoft_tab button {
+    font-size: 1.1rem;
+  }
+}
+
+
+/* Optional: Base styles for tab buttons */
+.cmp-tabs__tab {
+  border: none;
+  background: transparent;
+	padding:0px 30px 0px 5px;
+  cursor: pointer;
+
+
+}
+
+/* Dashed border when the tab is active */
+.cmp-tabs__tab--active {
+  border: 2px dashed #000;
+  border-radius: 4px;
+}
+
+

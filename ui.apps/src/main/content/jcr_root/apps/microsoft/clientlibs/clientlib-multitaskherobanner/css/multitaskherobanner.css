@@ -1,0 +1,82 @@
+/* Container to wrap the full component */
+.multitaskherobanner-container {
+  width: 100%;
+  padding: 40px 20px;
+  background-color: #f2f2f2;
+  box-sizing: border-box;
+}
+
+/* Inner wrapper for split layout */
+.multitaskherobanner-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Left Side – Image */
+.multitaskherobanner-image {
+  flex: 1 1 32%;
+  padding: 10px 30px 10px 10px;
+  box-sizing: border-box;
+  text-align: center;
+  margin-left:95px;
+}
+
+.multitaskherobanner-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Right Side – Text and Button */
+.multitaskherobanner-content {
+  flex: 1 1 40%;
+  padding: 10px 77px 10px 142px;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.multitaskherobanner-title {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 1rem;
+}
+
+.multitaskherobanner-description {
+  font-size: 1.2rem;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.multitaskherobanner-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Primary Button */
+.multitaskherobanner-button {
+  background-color: #0067B8;
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.multitaskherobanner-button:hover {
+  background-color: #0053a6;
+}
+
+.multitaskherobanner-button:focus {
+  outline: 2px dotted #000;
+  outline-offset: 3px;
+}

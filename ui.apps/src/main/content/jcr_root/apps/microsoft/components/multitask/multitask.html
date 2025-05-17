@@ -1,0 +1,19 @@
+<sly data-sly-use.clientlib="core/wcm/components/commons/v1/templates/clientlib.html">
+    <sly data-sly-call="${clientlib.css @ categories='microsoft.multitask'}"/>
+</sly>
+<sly data-sly-use.multitask="com.aem.trg.microsoft.core.models.Multitasker" />
+
+<!-- MAIN IMAGE + TEXT SECTION -->
+<div class="multitask-component" style="background-color: ${multitask.backgroundColor @ context='html'}">
+    <div class="multitask-container">
+		<div class="multitask-content">
+            <h3>${multitask.title @ context='html'}</h3>
+            <p>${multitask.description @ context='html'}</p>
+        </div>
+        <img src="${multitask.fileReference}" alt="${multitask.title @ context='html'}"/>
+
+    </div>
+</div>
+
+
+

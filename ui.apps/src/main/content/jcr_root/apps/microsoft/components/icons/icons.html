@@ -1,0 +1,34 @@
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+        data-sly-call="${clientlib.all @ categories='microsoft.icons'}"/>
+
+<sly data-sly-use.iconsmodel="com.aem.trg.microsoft.core.models.ParentIcons" />
+
+<div class="icons-container">
+    <!-- Main Title -->
+    <h2 class="main-title">${properties.mainTitle}</h2>
+
+    <!-- Main Description -->
+    <p class="main-description">${properties.mainDescription}</p>
+
+    <div class="retailer-card-list">
+        <sly data-sly-list.retailer="${iconsmodel.icons}">
+
+                <!-- Only image inside card -->
+                    <div class="retailer-card-wrapper">
+                        <div class="retailer-card">
+                            <sly data-sly-test="${retailer.fileReference}">
+                                <img src="${retailer.fileReference}" alt="${retailer.title}" class="retailer-logo"/>
+                            </sly>
+                        </div>
+
+                        <!-- Text and link OUTSIDE the box -->
+                        <div class="retailer-info">
+                            <div class="retailer-name">${retailer.title}</div>
+                            <a href="${retailer.link}" class="buy-link">${retailer.text}</a>
+                        </div>
+                    </div>
+
+                </sly>
+
+    </div>
+</div>

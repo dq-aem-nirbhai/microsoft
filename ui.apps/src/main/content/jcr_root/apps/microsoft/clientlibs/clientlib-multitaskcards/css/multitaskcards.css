@@ -1,0 +1,65 @@
+
+.multitaskcards-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+
+
+
+  margin-left: -133px;
+  padding: 1rem 0;
+  padding-left: 140px;
+
+}
+
+.multitaskcards-content {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  width: 300px;
+  height: 350px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+   text-align: left;
+   padding: 0px 13px;
+    
+
+}
+
+
+
+.multitaskcards-content img {
+  width: 32px;
+  height: 55px;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+.multitaskcards-content h3 {
+  font-size: 1rem;
+  color: #0078d4;
+
+  text-align: left;
+}
+
+.multitaskcards-content h2 {
+  font-size: 1.25rem;
+  color: #000;
+
+  text-align: left;
+}
+
+.multitaskcards-content p {
+  font-size: 0.95rem;
+  color: #555555;
+  line-height: 1.5;
+  text-align: left;
+}
+
+
+
+
+
+
+

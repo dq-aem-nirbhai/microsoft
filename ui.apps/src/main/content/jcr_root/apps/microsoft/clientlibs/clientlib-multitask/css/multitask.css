@@ -1,0 +1,86 @@
+
+.multitask-component {
+    display: flex;
+  flex-direction: row; /* Image on right */
+   justify-content:center;
+  align-items: center;
+  margin:30px 0;
+  padding: 0px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  width: 1200px;
+}
+
+.multitask-container {
+  display: flex;
+  flex-direction: row; /* Image on right */
+    justify-content:center;
+  align-items: center;
+  max-width: 1200px;
+  gap:40px;
+  flex-wrap: wrap;
+  text-align: left;
+}
+
+/* IMAGE - position it to the right by putting it after text in HTML */
+.multitask-container img {
+  /* Ensures image is on the right */
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
+  width: 100%;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+/* TEXT CONTENT - will be on the left */
+.multitask-content {
+
+     flex: 1;
+     min-width: 350px;
+     max-width: 400px;
+    padding:30px;
+    margin-left:50px;
+
+}
+
+.multitask-content h3 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 20px;
+}
+
+.multitask-content p {
+  font-size: 13px;
+  color: #333;
+  line-height: 1.6;
+}
+
+.multitask-content p a {
+  color: #0061ae !important;
+  text-decoration: underline;
+  font-size: inherit;
+  line-height: inherit;
+  vertical-align: baseline;
+  position: static;
+  top: auto;
+}
+
+@media (max-width: 768px) {
+  .multitask-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .multitask-content {
+    max-width: 100%;
+  }
+
+  .multitask-container img {
+    order: 1;
+  }
+
+  .multitask-content {
+    order: 2;
+  }
+}

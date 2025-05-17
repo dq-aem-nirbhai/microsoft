@@ -1,0 +1,21 @@
+<sly data-sly-use.clientlib="core/wcm/components/commons/v1/templates/clientlib.html">
+    <sly data-sly-call="${clientlib.css @ categories='microsoft.multitaskertabs'}"/>
+</sly>
+<sly data-sly-use.multitaskertabs="com.aem.trg.microsoft.core.models.Links" />
+
+<div class="multitaskertabs-component">
+
+    <!-- Main Title and Text should be on top -->
+    <div class="main-content">
+        <h2>${multitaskertabs.mainTitle}</h2>
+        <p>${multitaskertabs.mainText}</p>
+    </div>
+
+    <!-- Tabs Component below -->
+
+
+    	<div class="microsoft_container">
+    		<sly data-sly-resource="${resource @ resourceType='core/wcm/components/tabs/v1/tabs'}"></sly>
+        </div>
+    
+</div>

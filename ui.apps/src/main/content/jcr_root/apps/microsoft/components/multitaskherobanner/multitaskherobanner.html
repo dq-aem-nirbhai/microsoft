@@ -1,0 +1,33 @@
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html" />
+<sly data-sly-call="${clientlib.css @ categories='microsoft.multitaskherobanner'}" />
+
+<sly data-sly-use.bannerModel="com.aem.trg.microsoft.core.models.MultitaskHeroBanner" />
+
+<div class="multitaskherobanner-container">
+    <div class="multitaskherobanner-inner">
+
+        <!-- Left Side Image -->
+        <div class="multitaskherobanner-image" data-sly-test="${bannerModel.fileReference}">
+            <img src="${bannerModel.fileReference}" alt="${bannerModel.imageAlt}" loading="lazy" />
+        </div>
+
+        <!-- Right Side Content -->
+        <div class="multitaskherobanner-content">
+
+            <h2 class="multitaskherobanner-title" data-sly-test="${bannerModel.title}">
+                ${bannerModel.title @ context='html'}
+            </h2>
+
+            <p class="multitaskherobanner-description" data-sly-test="${bannerModel.description}">
+                ${bannerModel.description}
+            </p>
+
+            <div class="multitaskherobanner-buttons" data-sly-test="${bannerModel.buttonLink}">
+                <a href="${bannerModel.buttonLink @ context='uri'}" class="multitaskherobanner-button">
+                    ${bannerModel.buttonText}
+                </a>
+            </div>
+
+        </div>
+    </div>
+</div>

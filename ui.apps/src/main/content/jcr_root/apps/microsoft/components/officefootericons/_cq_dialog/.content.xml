@@ -1,64 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jcr:root
-        xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
-        xmlns:cq="http://www.day.com/jcr/cq/1.0"
-        xmlns:jcr="http://www.jcp.org/jcr/1.0"
-        jcr:primaryType="nt:unstructured"
-        jcr:title="Learn More About"
-        sling:resourceType="cq/gui/components/authoring/dialog">
-
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Learn More About"
+    sling:resourceType="cq/gui/components/authoring/dialog">
     <content
-            jcr:primaryType="nt:unstructured"
-            sling:resourceType="granite/ui/components/coral/foundation/container">
-
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
         <items jcr:primaryType="nt:unstructured">
             <title
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
-                    fieldLabel="Section Title"
-                    name="./Title"/>
-
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                fieldLabel="Section Title"
+                name="./Title"/>
             <learnMoreItems
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
-                    composite="{Boolean}true"
-                    fieldLabel="Learn More Items">
-
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                composite="{Boolean}true"
+                fieldLabel="Learn More Items">
                 <field
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="granite/ui/components/coral/foundation/form/fieldset"
-                        name="./learnMoreItems">
-
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/coral/foundation/form/fieldset"
+                    name="./learnMoreItems">
                     <layout
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="granite/ui/components/coral/foundation/layouts/fixedcolumns"/>
-
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/layouts/fixedcolumns"/>
                     <items jcr:primaryType="nt:unstructured">
                         <icon
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
-                                fieldLabel="Icon"
-                                name="./icon"
-                                allowUpload="{Boolean}false"
-                                autoStart="{Boolean}false"
-                                multiple="{Boolean}false"
-                                uploadUrl="${request.contextPath}/content/dam"
-                                fileNameParameter="./fileName"
-                                fileReferenceParameter="./fileReference"
-                                mimeTypes="[image/gif,image/jpeg,image/png,image/svg+xml]"/>
-
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                            allowUpload="{Boolean}false"
+                            autoStart="{Boolean}false"
+                            fieldLabel="Icon"
+                            fileNameParameter="./fileName"
+                            fileReferenceParameter="./fileReference"
+                            mimeTypes="[image/gif,image/jpeg,image/png,image/svg+xml]"
+                            multiple="{Boolean}false"
+                            name="./icon"
+                            uploadUrl="${request.contextPath}/content/dam"/>
                         <title
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
-                                fieldLabel="Title"
-                                name="./title"/>
-
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            fieldLabel="Title"
+                            name="./title"/>
                         <link
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
-                                fieldLabel="Link"
-                                name="./link"
-                                rootPath="/content"/>
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                            fieldLabel="Link"
+                            name="./link"
+                            rootPath="/content"/>
                     </items>
                 </field>
             </learnMoreItems>

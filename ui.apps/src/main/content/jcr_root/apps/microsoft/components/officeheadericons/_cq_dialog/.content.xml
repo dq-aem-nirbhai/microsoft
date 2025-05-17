@@ -4,21 +4,21 @@
     jcr:title="office-header-icons"
     sling:resourceType="cq/gui/components/authoring/dialog"
     extraClientlibs="[cq.authoring.dialog.all]">
-<content
+    <content
         jcr:primaryType="nt:unstructured"
         sling:resourceType="granite/ui/components/coral/foundation/container">
-<items jcr:primaryType="nt:unstructured">
-<column
+        <items jcr:primaryType="nt:unstructured">
+            <column
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="granite/ui/components/coral/foundation/container">
-<items jcr:primaryType="nt:unstructured">
-<title
+                <items jcr:primaryType="nt:unstructured">
+                    <title
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
                         fieldLabel="Title"
                         name="./title"
                         required="{Boolean}true"/>
-<text
+                    <text
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="cq/gui/components/authoring/dialog/richtext"
                         fieldLabel="Text"
@@ -139,25 +139,24 @@
                             </cui>
                         </uiSettings>
                     </text>
-
-<links
+                    <links
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
                         composite="{Boolean}true">
-<field
+                        <field
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="granite/ui/components/coral/foundation/container"
                             name="./links">
- <layout
-            jcr:primaryType="nt:unstructured"
-            sling:resourceType="granite/ui/components/coral/foundation/layouts/fixedcolumns"
-            method="absolute" />
-<items jcr:primaryType="nt:unstructured">
-<column
+                            <layout
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/layouts/fixedcolumns"
+                                method="absolute"/>
+                            <items jcr:primaryType="nt:unstructured">
+                                <column
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="granite/ui/components/coral/foundation/container">
-<items jcr:primaryType="nt:unstructured">
-<file
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <file
                                             jcr:primaryType="nt:unstructured"
                                             sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
                                             class="cq-droptarget"
@@ -165,27 +164,26 @@
                                             fileReferenceParameter="./fileReference"
                                             mimeTypes="[image/gif,image/jpeg,image/png,image/tiff,image/svg+xml]"
                                             name="./file"/>
-<icontitle
+                                        <icontitle
                                             jcr:primaryType="nt:unstructured"
                                             sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
                                             fieldLabel="Icon title"
                                             name="./iconTitle"
                                             required="{Boolean}true"/>
-<iconlink
+                                        <iconlink
                                             jcr:primaryType="nt:unstructured"
                                             sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
                                             fieldLabel="icon link"
                                             name="./iconLink"
                                             required="{Boolean}true"
                                             rootPath="/content"/>
-
-</items>
-</column>
-</items>
-</field>
-</links>
-</items>
-</column>
-</items>
-</content>
+                                    </items>
+                                </column>
+                            </items>
+                        </field>
+                    </links>
+                </items>
+            </column>
+        </items>
+    </content>
 </jcr:root>

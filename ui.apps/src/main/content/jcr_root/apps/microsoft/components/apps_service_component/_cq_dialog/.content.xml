@@ -1,84 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
-          xmlns:cq="http://www.day.com/jcr/cq/1.0"
-          xmlns:jcr="http://www.jcp.org/jcr/1.0"
-          jcr:primaryType="nt:unstructured"
-          jcr:title="Apps and Services"
-          sling:resourceType="cq/gui/components/authoring/dialog"
-          cq:dialogMode="floating">
-
-    <content jcr:primaryType="nt:unstructured"
-             sling:resourceType="granite/ui/components/coral/foundation/container">
-        <layout jcr:primaryType="nt:unstructured"
-                sling:resourceType="granite/ui/components/coral/foundation/layouts/fixedcolumns"/>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    cq:dialogMode="floating"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Apps and Services"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <layout
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/coral/foundation/layouts/fixedcolumns"/>
         <items jcr:primaryType="nt:unstructured">
-            <main jcr:primaryType="nt:unstructured"
-                  sling:resourceType="granite/ui/components/coral/foundation/container">
+            <main
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/container">
                 <items jcr:primaryType="nt:unstructured">
-
-                    <!-- Title -->
-                    <title jcr:primaryType="nt:unstructured"
-                           sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
-                           fieldLabel="Section Title"
-                           name="./title"/>
-
-                    <!-- Description -->
-                    <description jcr:primaryType="nt:unstructured"
-                                 sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
-                                 fieldLabel="Section Description"
-                                 name="./description"/>
-
-                    <!-- Outer Multifield for Text Groups -->
-                    <apps jcr:primaryType="nt:unstructured"
-                          sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
-                          composite="{Boolean}true"
-                          fieldLabel="Text Groups">
-                        <field jcr:primaryType="nt:unstructured"
-                               sling:resourceType="granite/ui/components/coral/foundation/form/fieldset"
-                               name="./items">
+                    <title
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="Section Title"
+                        name="./title"/>
+                    <description
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                        fieldLabel="Section Description"
+                        name="./description"/>
+                    <apps
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                        composite="{Boolean}true"
+                        fieldLabel="Text Groups">
+                        <field
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/fieldset"
+                            name="./items">
                             <items jcr:primaryType="nt:unstructured">
-
-                                <!-- Text Title -->
-                                <text jcr:primaryType="nt:unstructured"
-                                      sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
-                                      fieldLabel="Text Heading"
-                                      name="./text"/>
+                                <text
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                    fieldLabel="Text Heading"
+                                    name="./text"/>
                                 <text1
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                    fieldLabel="Text Heading1 (Optional)"
+                                    name="./text1"
+                                    required="{Boolean}false"/>
+                                <nestedApps
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                    composite="{Boolean}true"
+                                    fieldLabel="App/Service Entries">
+                                    <field
                                         jcr:primaryType="nt:unstructured"
-                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
-                                        fieldLabel="Text Heading1 (Optional)"
-                                        name="./text1"
-                                        required="{Boolean}false"/>
-
-
-                                <!-- Nested Multifield: Label/Link pairs -->
-                                <nestedApps jcr:primaryType="nt:unstructured"
-                                            sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
-                                            composite="{Boolean}true"
-                                            fieldLabel="App/Service Entries">
-                                    <field jcr:primaryType="nt:unstructured"
-                                           sling:resourceType="granite/ui/components/coral/foundation/form/fieldset"
-                                           name="./services">
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/fieldset"
+                                        name="./services">
                                         <items jcr:primaryType="nt:unstructured">
-
-                                            <label jcr:primaryType="nt:unstructured"
-                                                   sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
-                                                   fieldLabel="App/Service Name"
-                                                   name="./label"/>
-
-                                            <link jcr:primaryType="nt:unstructured"
-                                                  sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
-                                                  fieldLabel="Link"
-                                                  name="./link"/>
-
+                                            <label
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="App/Service Name"
+                                                name="./label"/>
+                                            <link
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                fieldLabel="Link"
+                                                name="./link"/>
                                         </items>
                                     </field>
                                 </nestedApps>
-
                             </items>
                         </field>
                     </apps>
-
                 </items>
             </main>
         </items>

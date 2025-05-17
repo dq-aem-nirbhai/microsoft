@@ -1,118 +1,100 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jcr:root
-        xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
-        xmlns:cq="http://www.day.com/jcr/cq/1.0"
-        xmlns:jcr="http://www.jcp.org/jcr/1.0"
-        xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
-        jcr:primaryType="nt:unstructured"
-        jcr:title="Office Component Dialog"
-        sling:resourceType="cq/gui/components/authoring/dialog">
-
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Office Component Dialog"
+    sling:resourceType="cq/gui/components/authoring/dialog">
     <content
-            jcr:primaryType="nt:unstructured"
-            sling:resourceType="granite/ui/components/coral/foundation/container">
-
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
         <layout
-                jcr:primaryType="nt:unstructured"
-                sling:resourceType="granite/ui/components/coral/foundation/layouts/fixedcolumns"/>
-
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/coral/foundation/layouts/fixedcolumns"/>
         <items jcr:primaryType="nt:unstructured">
             <main
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="granite/ui/components/coral/foundation/container">
-
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/container">
                 <items jcr:primaryType="nt:unstructured">
-
-                    <!-- Image Upload -->
                     <image
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
-                            fieldLabel="Background Image"
-                            name="./image"
-                            class="cq-droptarget"
-                            fileNameParameter="./fileName"
-                            fileReferenceParameter="./fileReference"
-                            mimeTypes="[image/gif,image/jpeg,image/png,image/tiff,image/svg+xml]"
-                            allowUpload="{Boolean}false"
-                            autoStart="{Boolean}false"
-                            autoUpload="{Boolean}false"
-                            multiple="{Boolean}false"
-                            useHTML5="{Boolean}true"
-                            ddGroup="media"/>
-
-                    <!-- Title -->
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                        allowUpload="{Boolean}false"
+                        autoStart="{Boolean}false"
+                        autoUpload="{Boolean}false"
+                        class="cq-droptarget"
+                        ddGroup="media"
+                        fieldLabel="Background Image"
+                        fileNameParameter="./fileName"
+                        fileReferenceParameter="./fileReference"
+                        mimeTypes="[image/gif,image/jpeg,image/png,image/tiff,image/svg+xml]"
+                        multiple="{Boolean}false"
+                        name="./image"
+                        useHTML5="{Boolean}true"/>
                     <title
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
-                            fieldLabel="Title"
-                            name="./title"/>
-
-                    <!-- Rich Text Description -->
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="Title"
+                        name="./title"/>
                     <description
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="cq/gui/components/authoring/dialog/richtext"
-                            fieldLabel="Description"
-                            name="./text"
-                            useFixedInlineToolbar="{Boolean}true">
-
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                        fieldLabel="Description"
+                        name="./text"
+                        useFixedInlineToolbar="{Boolean}true">
                         <rtePlugins jcr:primaryType="nt:unstructured">
-                            <format jcr:primaryType="nt:unstructured" features="bold,italic"/>
-                            <justify jcr:primaryType="nt:unstructured" features="-"/>
-                            <links jcr:primaryType="nt:unstructured" features="modifylink,unlink"/>
-                            <lists jcr:primaryType="nt:unstructured" features="*"/>
+                            <format
+                                jcr:primaryType="nt:unstructured"
+                                features="bold,italic"/>
+                            <justify
+                                jcr:primaryType="nt:unstructured"
+                                features="-"/>
+                            <links
+                                jcr:primaryType="nt:unstructured"
+                                features="modifylink,unlink"/>
+                            <lists
+                                jcr:primaryType="nt:unstructured"
+                                features="*"/>
                         </rtePlugins>
                     </description>
-
-                    <!-- Primary Button Text -->
                     <buttonText
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
-                            fieldLabel="Primary Button Text"
-                            name="./buttonText"/>
-
-                    <!-- Primary Button Link -->
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="Primary Button Text"
+                        name="./buttonText"/>
                     <linkUrl
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
-                            fieldLabel="Primary Button Link"
-                            name="./linkUrl"
-                            rootPath="/content"/>
-
-                    <!-- Dropdown Toggle Button Text -->
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                        fieldLabel="Primary Button Link"
+                        name="./linkUrl"
+                        rootPath="/content"/>
                     <buttonText1
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
-                            fieldLabel="Dropdown Button Text"
-                            name="./buttonText1"/>
-
-                    <!-- Dropdown Multifield -->
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="Dropdown Button Text"
+                        name="./buttonText1"/>
                     <dropdownitems
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
-                            fieldLabel="Dropdown Items"
-                            composite="{Boolean}true">
-
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                        composite="{Boolean}true"
+                        fieldLabel="Dropdown Items">
                         <field
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="granite/ui/components/coral/foundation/form/fieldset"
-                                name="./dropdownitems">
-
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/fieldset"
+                            name="./dropdownitems">
                             <items jcr:primaryType="nt:unstructured">
                                 <text1
-                                        jcr:primaryType="nt:unstructured"
-                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
-                                        fieldLabel="Item Text"
-                                        name="./text1"/>
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                    fieldLabel="Item Text"
+                                    name="./text1"/>
                                 <link
-                                        jcr:primaryType="nt:unstructured"
-                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
-                                        fieldLabel="Item Link"
-                                        name="./link"
-                                        rootPath="/content"/>
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                    fieldLabel="Item Link"
+                                    name="./link"
+                                    rootPath="/content"/>
                             </items>
                         </field>
                     </dropdownitems>
-
                 </items>
             </main>
         </items>

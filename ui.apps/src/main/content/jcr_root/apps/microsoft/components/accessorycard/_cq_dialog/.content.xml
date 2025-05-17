@@ -1,47 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jcr:root
-        xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
-        xmlns:cq="http://www.day.com/jcr/cq/1.0"
-        xmlns:jcr="http://www.jcp.org/jcr/1.0"
-        jcr:primaryType="nt:unstructured"
-        jcr:title="accessorycard"
-        sling:resourceType="cq/gui/components/authoring/dialog">
-
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="accessorycard"
+    sling:resourceType="cq/gui/components/authoring/dialog">
     <content
-            jcr:primaryType="nt:unstructured"
-            sling:resourceType="granite/ui/components/coral/foundation/container">
-
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
         <items jcr:primaryType="nt:unstructured">
             <file
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
-                    class="cq-droptarget"
-                    fileNameParameter="./fileName"
-                    fileReferenceParameter="./fileReference"
-                    mimeTypes="[image/gif,image/jpeg,image/png,image/tiff,image/svg+xml]"
-                    name="./file"/>
-
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                class="cq-droptarget"
+                fileNameParameter="./fileName"
+                fileReferenceParameter="./fileReference"
+                mimeTypes="[image/gif,image/jpeg,image/png,image/tiff,image/svg+xml]"
+                name="./file"/>
             <text1
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
-                    fieldLabel="Description 1"
-                    name="./text1" />
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                fieldLabel="Description 1"
+                name="./text1"/>
             <text2
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
-                    fieldLabel="Description 2"
-                    name="./text2" />
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                fieldLabel="Description 2"
+                name="./text2"/>
             <linkTitle
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
-                    fieldLabel="Link Title"
-                    name="./linkTitle" />
-
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                fieldLabel="Link Title"
+                name="./linkTitle"/>
             <link
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
-                    fieldLabel="Link"
-                    name="./link"/>
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                fieldLabel="Link"
+                name="./link"/>
         </items>
     </content>
 </jcr:root>

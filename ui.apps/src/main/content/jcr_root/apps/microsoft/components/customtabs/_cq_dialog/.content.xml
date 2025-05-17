@@ -1,65 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
-          xmlns:cq="http://www.day.com/jcr/cq/1.0"
-          xmlns:jcr="http://www.jcp.org/jcr/1.0"
-          jcr:primaryType="nt:unstructured"
-          jcr:title="wnavigation"
-          sling:resourceType="cq/gui/components/authoring/dialog">
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="wnavigation"
+    sling:resourceType="cq/gui/components/authoring/dialog">
     <content
-            jcr:primaryType="nt:unstructured"
-            sling:resourceType="granite/ui/components/coral/foundation/container">
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
         <items jcr:primaryType="nt:unstructured">
-
             <navItems
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
-                    composite="{Boolean}true"
-                    fieldLabel="Navigation Items"
-                    name="./items">
-                <field jcr:primaryType="nt:unstructured"
-                       sling:resourceType="granite/ui/components/coral/foundation/form/fieldset"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                composite="{Boolean}true"
+                fieldLabel="Navigation Items"
                 name="./items">
+                <field
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/coral/foundation/form/fieldset"
+                    name="./items">
                     <items jcr:primaryType="nt:unstructured">
                         <label
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
-                                fieldLabel="Label"
-                                name="./label"/>
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            fieldLabel="Label"
+                            name="./label"/>
                         <anchorId
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
-                                root="/apps/microsoft/components"
-                                fieldLabel="Anchor ID (e.g., #Benefits)"
-                                name="./anchorId"/>
-
-
-
-
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                            fieldLabel="Anchor ID (e.g., #Benefits)"
+                            name="./anchorId"
+                            root="/apps/microsoft/components"/>
                     </items>
                 </field>
             </navItems>
-
             <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                composite="{Boolean}true"
+                fieldLabel="Tabs"
+                name="./tabs">
+                <field
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
-                    fieldLabel="Tabs"
-                    composite="{Boolean}true"
+                    sling:resourceType="granite/ui/components/coral/foundation/form/fieldset"
                     name="./tabs">
-                <field jcr:primaryType="nt:unstructured"
-                       sling:resourceType="granite/ui/components/coral/foundation/form/fieldset"
-                       name="./tabs">
                     <items jcr:primaryType="nt:unstructured">
                         <label
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
-                                fieldLabel="id"
-                                name="./id"/>
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                            fieldLabel="id"
+                            name="./id"/>
                         <resourceType
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
-                                name="./resourceType"
-                                root="/apps/microsoft/components"
-                                fieldLabel="Component Resource Type"/>
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                            fieldLabel="Component Resource Type"
+                            name="./resourceType"
+                            root="/apps/microsoft/components"/>
                     </items>
                 </field>
             </tabs>

@@ -20,15 +20,12 @@ public class AppsandService {
     @ValueMapValue
     private String text;
 
-
     @ChildResource
     private List<LinkItem> buttons; // this will map the multifield
 
     public List<LinkItem> getButtons() {
         return buttons;
     }
-
-
 
     public String getTitle() {
         return title;

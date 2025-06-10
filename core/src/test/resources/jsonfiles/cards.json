@@ -1,0 +1,14 @@
+{
+  "links": {
+    "item0": {
+      "title": "Achieve the extraordinary",
+      "description": "Microsoft 365 delivers cloud storage, security and Microsoft Copilot in your favourite apps – all in one plan.",
+      "buttonlink": "/content/link1"
+    },
+    "item1": {
+      "title": "Copilot is your AI companion",
+      "description": "Always by your side, ready to support you whenever and wherever you need it.",
+      "buttonlink": "/content/link2"
+    }
+  }
+}

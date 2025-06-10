@@ -1,0 +1,23 @@
+{
+  "fileReference": "/content/dam/image.png",
+  "title": "Apps and services",
+  "text": "Create your best work on all your devices—from desktop to web—using the tools you need for home and business.",
+  "buttons": {
+    "item0": {
+      "text": "Personal and family",
+      "link": "/content/personal-and-family"
+    },
+    "item1": {
+      "text": "Business",
+      "link": "/content/business"
+    },
+    "item2": {
+      "text": "Enterprise",
+      "link": "/content/enterprise"
+    },
+    "item3": {
+      "text": "Education",
+      "link": "/content/education"
+    }
+  }
+}

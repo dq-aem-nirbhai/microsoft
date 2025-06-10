@@ -1,0 +1,15 @@
+{
+  "mainLabel": "For business",
+  "links": {
+    "item0": {
+      "title": "Surface Pro for Business, Copilot+ PC | Intel",
+      "description": "Ultra-versatile and built with Intel® Core™ Ultra processors (Series 2) that power AI experiences to amplify your team’s productivity.",
+      "buttonlink": "/content/cardA"
+    },
+    "item1": {
+      "title": "Microsoft 365 Copilot",
+      "description": "Save time and focus on the things that matter most with AI in Microsoft 365 for business.",
+      "buttonlink": "/content/cardB"
+    }
+  }
+}

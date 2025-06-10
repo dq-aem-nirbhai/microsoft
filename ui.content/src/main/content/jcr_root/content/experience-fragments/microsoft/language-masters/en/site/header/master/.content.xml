@@ -29,6 +29,7 @@
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="microsoft/components/search"
                 searchRoot="/content/microsoft/en"/>
+            <logo/>
         </root>
     </jcr:content>
 </jcr:root>

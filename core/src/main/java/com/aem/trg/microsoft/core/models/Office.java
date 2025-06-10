@@ -14,7 +14,7 @@ import java.util.Optional;
 
 @Model(adaptables = Resource.class,
         defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL)
-public class Office implements ComponentExporter {
+public class Office{
 
     @ValueMapValue
     private String title;
@@ -74,6 +74,7 @@ public class Office implements ComponentExporter {
     }
 
     // DropdownItem is an inner class representing the items in the dropdown menu
+    @Model(adaptables = Resource.class)
     public static class DropdownItem {
         private final String text1;
         private final String link;
@@ -92,9 +93,4 @@ public class Office implements ComponentExporter {
         }
     }
 
-    // Export the model data as a JSON object for easy consumption by other parts of AEM
-    @Override
-    public String getExportedType() {
-        return "com.aem.trg.microsoft.core.models.Office";
-    }
 }

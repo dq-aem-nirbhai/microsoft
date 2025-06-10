@@ -87,8 +87,17 @@
             cq:rolloutConfigs="[/libs/msm/wcm/rolloutconfigs/default]"
             jcr:primaryType="cq:LiveCopy"/>
     </jcr:content>
-    <homepage/>
-    <first/>
-    <cards/> 
-    <testcomponent/>
+    <cards/>
+    <content-title/>
+    <business-cards/>
+    <office/>
+    <apps-and-service/>
+    <office-cards/>
+    <windows/>
+    <window-cards/>
+    <home-page/>
+    <page/>
+    <tabs/>
+    <icons/>
+    <copilot/>
 </jcr:root>

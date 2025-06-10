@@ -1,0 +1,18 @@
+{
+  "title": "Office is now Microsoft 365",
+  "subtitle": "Office apps, cloud storage, and more",
+  "text": "Find the right plan for you",
+  "buttonText": "Signup for free",
+  "buttonText1": "Get Microsoft 365",
+  "linkUrl": "/content/office/get-started",
+  "dropdownitems": {
+    "item0": {
+      "text1": "Personal and family",
+      "link": "/content/office/personal and family"
+    },
+    "item1": {
+      "text1": "Business",
+      "link": "/content/office/business"
+    }
+  }
+}

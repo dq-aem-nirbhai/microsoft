@@ -2,7 +2,7 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2025-04-26T17:47:07.930+05:30"
+        cq:lastModified="{Date}2025-05-10T18:11:34.003+05:30"
         cq:lastModifiedBy="admin"
         cq:template="/conf/microsoft/settings/wcm/templates/homepage"
         jcr:primaryType="cq:PageContent"
@@ -19,7 +19,7 @@
                 <cards
                     jcr:created="{Date}2025-04-26T16:32:45.246+05:30"
                     jcr:createdBy="admin"
-                    jcr:lastModified="{Date}2025-04-26T17:47:07.917+05:30"
+                    jcr:lastModified="{Date}2025-05-10T18:11:33.996+05:30"
                     jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="microsoft/components/cards"
@@ -31,7 +31,7 @@
                             buttontext="Shop Microsoft 365"
                             description="&lt;p>Microsoft 365 delivers cloud storage, security and Microsoft Copilot in your favourite apps – all in one plan.&lt;/p>&#xd;&#xa;"
                             descriptionlink="https://www.microsoft.com/en-in/microsoft-365/buy/compare-all-microsoft-365-products?icid=mscom_marcom_CPH1a_Microsoft365AI"
-                            fileReference="/content/dam/microsoft/2.png"
+                            fileReference="/content/dam/microsoft/cards1_1.png"
                             imagelink="https://www.microsoft.com/en-in/microsoft-365/buy/compare-all-microsoft-365-products?icid=mscom_marcom_CPH1a_Microsoft365AI"
                             title="Achieve the extraordinary"
                             titlelink="https://www.microsoft.com/en-in/microsoft-365/buy/compare-all-microsoft-365-products?icid=mscom_marcom_CPH1a_Microsoft365AI"/>
@@ -41,7 +41,7 @@
                             buttontext="Download Copilot  the app"
                             description="&lt;p>Always by your side, ready to support you whenever and wherever you need it.&lt;/p>&#xd;&#xa;"
                             descriptionlink="https://www.microsoft.com/en-in/microsoft-copilot/for-individuals/copilot-app?form=MY02G2&amp;OCID=MY02G2"
-                            fileReference="/content/dam/microsoft/0.png"
+                            fileReference="/content/dam/microsoft/cards2.png"
                             imagelink="https://www.microsoft.com/en-in/microsoft-copilot/for-individuals/copilot-app?form=MY02G2&amp;OCID=MY02G2"
                             title="Copilot is your AI companion"
                             titlelink="https://www.microsoft.com/en-in/microsoft-copilot/for-individuals/copilot-app?form=MY02G2&amp;OCID=MY02G2"/>
@@ -51,7 +51,7 @@
                             buttontext="Shop Xbox Series S"
                             description="&lt;p>Next-gen performance in the smallest Xbox ever.&lt;/p>&#xd;&#xa;"
                             descriptionlink="https://www.xbox.com/en-in/consoles/xbox-series-s?icid=mscom_marcom_CPH3a_XboxSeriesS"
-                            fileReference="/content/dam/microsoft/4.png"
+                            fileReference="/content/dam/microsoft/cards3.png"
                             imagelink="https://www.xbox.com/en-in/consoles/xbox-series-s?icid=mscom_marcom_CPH3a_XboxSeriesS"
                             title="Xbox Series S"
                             titlelink="https://www.xbox.com/en-in/consoles/xbox-series-s?icid=mscom_marcom_CPH3a_XboxSeriesS"/>
@@ -61,7 +61,7 @@
                             buttontext="Shop Xbox Series X"
                             description="&lt;p>The fastest, most powerful Xbox ever.&lt;/p>&#xd;&#xa;"
                             descriptionlink="https://www.xbox.com/en-in/consoles/xbox-series-x?icid=mscom_marcom_CPH4a_XboxSeriesX"
-                            fileReference="/content/dam/microsoft/5.png"
+                            fileReference="/content/dam/microsoft/cards4.png"
                             imagelink="https://www.xbox.com/en-in/consoles/xbox-series-x?icid=mscom_marcom_CPH4a_XboxSeriesX"
                             title="Xbox Series X"
                             titlelink="https://www.xbox.com/en-in/consoles/xbox-series-x?icid=mscom_marcom_CPH4a_XboxSeriesX"/>
